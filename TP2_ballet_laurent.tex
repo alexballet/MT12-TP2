@@ -1,0 +1,101 @@
+%Information relative au document
+% !TEX encoding = MacOSRoman
+\documentclass[a4paper,12pt]{report}
+
+
+%Paquets
+\usepackage[T1]{fontenc}
+\usepackage[applemac]{inputenc}
+\usepackage{xspace}
+\usepackage[frenchb]{babel}
+\usepackage{textcomp}
+\usepackage{lmodern}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%Pour faire un tableau de d\'eriv\'e
+\usepackage{tikz,tkz-tab}
+\usepackage{float}
+\usepackage{here}
+\usepackage[left=2cm,right=2cm,top=3cm,bottom=3cm]{geometry}
+\usepackage{listings}
+%Pour inclure du code
+\lstset{numbers=left, numberstyle=\tiny, stepnumber=5, numbersep=5pt, language=Scilab, basicstyle=\small,frame=leftline,captionpos=b,linewidth=175mm,breaklines=true, commentstyle=\color{green},stringstyle=\color{red},identifierstyle=\ttfamily,keywordstyle=\color{blue}}
+
+
+
+%D\'ebut du rapport
+\begin{document}
+
+%Page de garde
+%\title{Rapport TP \no1 MT12}
+%\author{Alexandre BALLET et Simon LAURENT}
+%\date{Printemps 2016}
+
+\thispagestyle{empty}
+
+\includegraphics[scale=0.06]{logo_utc.png}
+
+{\large
+
+\vspace*{1cm}
+
+\begin{center}
+
+{\bf Rapport de MT12 : Techniques math\'ematiques de l'ing\'enieur \\ UNIVERSIT\'E DE TECHNOLOGIE DE COMPI\`EGNE}
+
+\vspace*{1 cm}
+
+\vspace*{1cm}
+
+Printemps 2016
+
+\vspace*{1cm}
+
+\vspace*{1cm}
+{\Large {\bf Alexandre BALLET et Simon LAURENT}}
+\vspace*{2cm}
+
+\vspace*{2 cm}
+\end{center}
+
+\flushleft{Sujet du rapport:\ \\
+{\Large {\bf Transform\'ee de Fourier}}}
+
+\vspace*{1 cm}
+\flushleft{D\'epartement des \'etudiants :\ \\
+{\Large {\bf  G\'enie Informatique}}}\\
+
+\vspace*{1 cm}
+\flushleft{Professeur :\ \\
+{\Large {\bf M. Djalil KATEB}}}\\
+}
+
+\newpage
+\null
+\newpage
+%Table des mati\`eres
+\tableofcontents
+
+
+%Exercice 1
+\chapter{S\'erie de Fourier}
+	
+%Exercice 2
+\chapter{\'Etude de fonctions}
+
+%Exercice 3
+\chapter{Ph\'enom\`ene de Gibbs}
+
+%Exercice 4
+\chapter{Application des s\'erie de Fourier}
+
+%Exercice 5
+\chapter{Equation de la chaleur}
+
+%Table des figures
+\listoffigures
+
+\end{document}
