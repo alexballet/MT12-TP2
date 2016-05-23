@@ -82,6 +82,32 @@ Printemps 2016
 
 %Questions 2.0 et 2.1
 \chapter{Définition de la DFT}
+
+	%Question 2.0
+	\section{D\'efinition}
+
+	%Question 2.1
+	\section{DFT d'une fonction}
+
+	Soit f d\'efinie sur une p\'eriode T (p\'eriodique de p\'eriode T) et soit $y_{k}$ une suite d'\'echantillons de $f$ en N points uniform\'ement r\'epartis sur une p\'eriode. La DFT de $f$ d'ordre $N$ est l'application qui associe \`a la suite $(y_{k})_{k=0,...,N-1}$ la suite constitu\'ee de la DFT appliqu\'ee au vecteur $y = (y_{k})_{k=0,...,N-1}$. On note $(DFT[f](k))_{0,...,N-1}$ la suite obtenue et $iDFT$ sa r\'eciproque.
+
+	Nous cherchons à montrer que l'on peut approcher le coefficient de Fourier $c_{n}$ \`a partir de l'approximation de l'int\'egrale la d\'effinissant par une somme de Riemann.
+
+	D'ap\`es la d\'efinition de $c_{n}$ on a : \[c_{n}=\frac{1}{T}\int_{0}^{T}f(t)e^{-2i\pi \frac{n}{T}t}dt\]
+
+	Si nous discr\`etisons $f(t)$ en divisant une p\'eriode $T$ en $N$ segments, on obtient :
+
+	\begin{eqnarray*}
+		c_{n}&=&\frac{1}{T}\int_{0}^{T}f(t)e^{-2i\pi \frac{n}{T}t}dt\\
+		&=&\frac{1}{T}\sum_{k=0}^{N-1}f(t_{k})e^{-2i\pi \frac{n}{T}k\frac{T}{N}}\frac{T}{N}\\
+		&=&\frac{1}{N}\sum_{k=0}^{N-1}y_{k}e^{-2i\pi n\frac{k}{N}}\\
+		&=&\frac{1}{N}\sum_{p=0}^{N-1}y_{p}e^{-2i\pi n\frac{p}{N}}\\
+		&=&\frac{1}{N}\sum_{p=0}^{N-1}y_{p}w^{np}\\
+	\end{eqnarray*}
+
+	D'o\`u \[c_{k}=\frac{1}{N}\sum_{p=0}^{N-1}y_{p}w^{pk}\]
+
+	Nous pouvons en d\'eduire que la DFT d'une suite $y_{k}$ est \'equivalent au coefficient de Fourier $c_{k}$ de cette s\'erie.
 	
 %Question 2.2
 \chapter{Une famille de fonctions tests}
