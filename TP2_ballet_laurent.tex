@@ -14,6 +14,8 @@
 \onehalfspacing
 \usepackage{graphicx}
 \usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
 \usepackage{amsfonts}
 %Pour faire un tableau de d\'eriv\'e
 \usepackage{tikz,tkz-tab}
@@ -24,6 +26,7 @@
 %Pour inclure du code
 \lstset{numbers=left, numberstyle=\tiny, stepnumber=5, numbersep=5pt, language=Scilab, basicstyle=\small,frame=leftline,captionpos=b,linewidth=175mm,breaklines=true, commentstyle=\color{green},stringstyle=\color{red},identifierstyle=\ttfamily,keywordstyle=\color{blue}}
 
+\newtheorem{definition}{Definition}
 
 
 %D\'ebut du rapport
@@ -81,19 +84,123 @@ Printemps 2016
 
 
 %Questions 2.0 et 2.1
-\chapter{Définition de la DFT}
+\chapter{D\'efinition de la DFT}
 
 	%Question 2.0
 	\section{D\'efinition}
 
+	\begin{definition}
+		On appelle transform\'ee de Fourier discr\`ete de la suite $(y_k),~k=0,~ldots,N-1$ la suite $(z_k)$ d\'efinie par 
+		$$
+		z_k=\cfrac{1}{N}\sum_{p=0}^{N-1}y_p\omega^{pk}
+		$$
+		o\`u $\omega=e^{-2i\frac{\pi}{N}}$. On notera $z[k]=DFT[f]k],~k=0,...,N-1$.
+	\end{definition}
+
+	Nous cherchons \`a montrer que
+
+	\begin{equation}
+		\sum_{k=0}^{N-1}\omega^{k(p-p')}=\left\{\begin{array}{lll} 0 &~\text{si}~&p\neq p'\\N&~\text{si}~&p=p'\end{array}\right.
+		\label{11}
+	\end{equation}
+
+	D'une part, posons $p=p'$ :
+
+	\begin{eqnarray*}
+		\sum_{k=0}^{N-1}\omega^{k(p-p')}&=&\sum_{k=0}^{N-1}1\\
+		&=&N\\
+	\end{eqnarray*}
+
+	D'autre part, posons $p\neq p'$ : 
+
+	\begin{eqnarray*}
+		\sum_{k=0}^{N-1}\omega^{k(p-p')}&=&\sum_{k=0}^{N-1}(\omega^{p-p'})^{k}\\
+		&=&\frac{1-\omega^{(p-p')^{k}}}{1-\omega^{p-p'}}\\
+		&=&\frac{1-e^{-2i\pi (p-p')}}{1-e^{-2i\frac{\pi}{N}(p-p')}}\\
+		&=&\frac{1-e^{-2i\pi k}}{1-e^{-2i\frac{\pi}{N}(p-p')}}\qquad,\;\text{o\`u}\;k\,\in\,\pmb{\mathbb{Z}}\\
+		&=&\frac{1-1}{1-e^{-2i\frac{\pi}{N}(p-p')}}\\
+		&=&0\\
+	\end{eqnarray*}
+
+	Nous cherchons ensuite \`a montrer que $B=\sqrt{N}A$ est une matrice unitaire, c'est-\`a-dire :
+
+	\begin{equation}
+		\overline{B^{T}}B=I\qquad,\;\text{o\`u I est la matrice identit\'e}\\
+	\end{equation}
+
+	\begin{eqnarray*}
+		B&=&\sqrt{N}\cfrac{1}{N}\left(
+								\begin{array}{lllll}
+									1&1&1& \ldots&1\\
+									1&\omega&\omega^2&\ldots&\omega^{N-1}\\
+									1&\omega^2&\omega^4&\ldots&\omega^{2(N-1)}\\
+									1&\omega^3&\omega^6&\ldots&\omega^{3(N-1)}\\
+									\vdots&\vdots&\vdots&&\vdots\\
+									1&\omega^{N-1}&\omega^{2(N-1)}&\ldots&\omega^{(N-1)^2}
+								\end{array}
+								\right)\\
+		\overline{B^{T}}B&=&\cfrac{\sqrt{N}}{N}\left(
+								\begin{array}{lllll}
+									1&1&1& \ldots&1\\
+									1&(\overline{\omega})&(\overline{\omega})^2&\ldots&(\overline{\omega})^{N-1}\\
+									1&(\overline{\omega})^2&(\overline{\omega})^4&\ldots&(\overline{\omega})^{2(N-1)}\\
+									1&(\overline{\omega})^3&(\overline{\omega})^6&\ldots&(\overline{\omega})^{3(N-1)}\\
+									\vdots&\vdots&\vdots&&\vdots\\
+									1&(\overline{\omega})^{N-1}&(\overline{\omega})^{2(N-1)}&\ldots&(\overline{\omega})^{(N-1)^2}
+								\end{array}
+								\right)
+							\cfrac{\sqrt{N}}{N}\left(
+								\begin{array}{lllll}
+									1&1&1& \ldots&1\\
+									1&\omega&\omega^2&\ldots&\omega^{N-1}\\
+									1&\omega^2&\omega^4&\ldots&\omega^{2(N-1)}\\
+									1&\omega^3&\omega^6&\ldots&\omega^{3(N-1)}\\
+									\vdots&\vdots&\vdots&&\vdots\\
+									1&\omega^{N-1}&\omega^{2(N-1)}&\ldots&\omega^{(N-1)^2}
+								\end{array}
+								\right)\\
+						&=&\cfrac{1}{N}(1+(\overline{\omega})^{p-1}(\omega)^{p'-1}+...+(\overline{\omega})^{(N-1)(p-1)}(\omega)^{(N-1)(p'-1)})\\
+						&=&\cfrac{1}{N}(1+(\omega)^{p'-p}+...+(\omega)^{(N-1)(p'-p)})\\
+						&=&\cfrac{1}{N}\sum_{k=0}^{N-1}\omega^{k(p'-p)}\\
+						&=&\cfrac{1}{N}N\qquad,\;\text{d'apr\`es \eqref{11}}\\
+						&=&1\\
+	\end{eqnarray*}
+
+	D'o\`u $B=\sqrt{N}A$ est une matrice unitaire.
+
+	Nous cherchons \`a pr\'esent $A^{-1}$ :
+
+	\begin{eqnarray*}
+		\overline{B^{T}}B&=&I\\
+		N\overline{A^{T}}A&=&I\\
+		A^{-1}&=&N\overline{A^{T}}\\
+		A^{-1}&=&\overline{\left(
+								\begin{array}{lllll}
+									1&1&1& \ldots&1\\
+									1&\omega&\omega^2&\ldots&\omega^{N-1}\\
+									1&\omega^2&\omega^4&\ldots&\omega^{2(N-1)}\\
+									1&\omega^3&\omega^6&\ldots&\omega^{3(N-1)}\\
+									\vdots&\vdots&\vdots&&\vdots\\
+									1&\omega^{N-1}&\omega^{2(N-1)}&\ldots&\omega^{(N-1)^2}
+								\end{array}
+								\right)^{T}}\\
+	\end{eqnarray*}
+
+	$A^{-1}$ est la matrice associ\`ee \`a la transformation inverse de la DFT, que l'on peut retrouver :
+
+	\begin{equation}
+		z'_k=\sum_{p=0}^{N-1}y_p\omega^{-pk}\qquad,\;\text{o\`u}\;\omega=e^{-2i\frac{\pi}{N}}
+	\end{equation}
+
+
 	%Question 2.1
 	\section{DFT d'une fonction}
 
-	Soit f d\'efinie sur une p\'eriode T (p\'eriodique de p\'eriode T) et soit $y_{k}$ une suite d'\'echantillons de $f$ en N points uniform\'ement r\'epartis sur une p\'eriode. La DFT de $f$ d'ordre $N$ est l'application qui associe \`a la suite $(y_{k})_{k=0,...,N-1}$ la suite constitu\'ee de la DFT appliqu\'ee au vecteur $y = (y_{k})_{k=0,...,N-1}$. On note $(DFT[f](k))_{0,...,N-1}$ la suite obtenue et $iDFT$ sa r\'eciproque.
+	Soit f d\'efinie sur une p\'eriode T (p\'eriodique de p\'eriode T) et soit $(y_{k})$ une suite d'\'echantillons de $f$ en N points uniform\'ement r\'epartis sur une p\'eriode. La DFT de $f$ d'ordre $N$ est l'application qui associe \`a la suite $(y_{k})_{k=0,...,N-1}$ la suite constitu\'ee de la DFT appliqu\'ee au vecteur $y = (y_{k})_{k=0,...,N-1}$. On note $(DFT[f](k))_{0,...,N-1}$ la suite obtenue et $iDFT$ sa r\'eciproque.
 
-	Nous cherchons à montrer que l'on peut approcher le coefficient de Fourier $c_{n}$ \`a partir de l'approximation de l'int\'egrale la d\'effinissant par une somme de Riemann.
+	Nous cherchons \`a montrer que l'on peut approcher le coefficient de Fourier $c_{n}$ \`a partir de l'approximation de l'int\'egrale la d\'effinissant par une somme de Riemann.
 
-	D'ap\`es la d\'efinition de $c_{n}$ on a : \[c_{n}=\frac{1}{T}\int_{0}^{T}f(t)e^{-2i\pi \frac{n}{T}t}dt\]
+	D'apr\`es la d\'efinition de $c_{n}$ on a : \[c_{n}=\frac{1}{T}\int_{0}^{T}f(t)e^{-2i\pi \frac{n}{T}t}dt\]
 
 	Si nous discr\`etisons $f(t)$ en divisant une p\'eriode $T$ en $N$ segments, on obtient :
 
@@ -102,12 +209,12 @@ Printemps 2016
 		&=&\frac{1}{T}\sum_{k=0}^{N-1}f(t_{k})e^{-2i\pi \frac{n}{T}k\frac{T}{N}}\frac{T}{N}\\
 		&=&\frac{1}{N}\sum_{k=0}^{N-1}y_{k}e^{-2i\pi n\frac{k}{N}}\\
 		&=&\frac{1}{N}\sum_{p=0}^{N-1}y_{p}e^{-2i\pi n\frac{p}{N}}\\
-		&=&\frac{1}{N}\sum_{p=0}^{N-1}y_{p}w^{np}\\
+		&=&\frac{1}{N}\sum_{p=0}^{N-1}y_{p}\omega^{np}\\
 	\end{eqnarray*}
 
-	D'o\`u \[c_{k}=\frac{1}{N}\sum_{p=0}^{N-1}y_{p}w^{pk}\]
+	D'o\`u \[c_{k}=\frac{1}{N}\sum_{p=0}^{N-1}y_{p}\omega^{pk}\]
 
-	Nous pouvons en d\'eduire que la DFT d'une suite $y_{k}$ est \'equivalent au coefficient de Fourier $c_{k}$ de cette s\'erie.
+	Nous pouvons en d\'eduire que la DFT d'une suite $(y_{k})$ est \'equivalent au coefficient de Fourier $c_{k}$ de cette s\'erie.
 	
 %Question 2.2
 \chapter{Une famille de fonctions tests}

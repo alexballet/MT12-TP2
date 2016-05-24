@@ -1,0 +1,339 @@
+\documentclass[11pt]{article}
+
+
+\usepackage{graphicx,amsmath,amssymb,color}
+\usepackage{latexsym,subfigure}
+
+
+\setlength{\topmargin}{-10mm} 
+\setlength{\textheight}{225mm} 
+\setlength{\oddsidemargin}{-10mm} 
+\setlength{\textwidth}{177mm} 
+
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition\rm}
+\newtheorem{example}{\it Example\/}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\h}{\boldsymbol{h}}
+\newcommand{\V}{\boldsymbol{V}}
+\newcommand{\n}{\boldsymbol{n}}
+\newcommand{\sH}{{\rm H}}
+\newcommand{\sW}{{\rm W}}
+\newcommand{\Om}{{\Omega}}
+\newcommand{\sL}{{\rm L}}
+\newcommand{\sC}{{\mathcal C}}
+%\renewcommand\theequation{\thesection.\arabic{equation}}
+\def\nablat{\nabla_{\tau}}
+\def\nablath{\nabla_{\tau,\h}}
+\def\Deltat{\Delta_{\tau}}
+\def\Deltath{\Delta_{\tau,\h}}
+\def\restriction#1#2{\mathchoice
+              {\setbox1\hbox{${\displaystyle #1}_{\scriptstyle #2}$}
+              \restrictionaux{#1}{#2}}
+              {\setbox1\hbox{${\textstyle #1}_{\scriptstyle #2}$}
+              \restrictionaux{#1}{#2}}
+              {\setbox1\hbox{${\scriptstyle #1}_{\scriptscriptstyle #2}$}
+              \restrictionaux{#1}{#2}}
+              {\setbox1\hbox{${\scriptscriptstyle #1}_{\scriptscriptstyle #2}$}
+              \restrictionaux{#1}{#2}}}
+\def\restrictionaux#1#2{{#1\,\smash{\vrule height .8\ht1 depth .85\dp1}}_{\,#2}} 
+\newcommand{\dive}{\mathrm{div}\,}
+%\newcommand{\tr}{\mathrm{Tr}\,}
+\newcommand{\divet}{\mathrm{div_{\tau}}\,}
+\newcommand{\diveth}{\mathrm{div_{\tau,\h}}\,}
+%\renewcommand{\theequation}{\arabic{equation}}  
+\def\nablat{\nabla_{\tau}}
+\def\nablath{\nabla_{\tau,\h}}
+\def\Deltat{\Delta_{\tau}}
+\def\Deltath{\Delta_{\tau,\h}}
+\newcommand{\dd}{\textup{d}}
+\newcommand{\Rd}{\color{red}}
+\newcommand{\Bk}{\color{black}}
+\newcommand{\Be}{\color{blue}}
+\newcommand{\Gn}{\color{magenta}}
+\newcommand{\Tr}{\mathrm{Tr}}
+
+
+\def\o{{\scriptscriptstyle\cal O}}
+\def\cprime{$'$}
+\def\blacksquare{
+\thinspace\nobreak \vrule width 5pt height 5pt depth 0pt}
+\newtheorem{remark}[theorem]{Remark}
+\newenvironment{proof}{\begin{trivlist}
+                       \item[]\hspace{0cm}{\bf Proof: }
+                       \hspace{0cm} }{\hfill $\blacksquare$
+                     \end{trivlist}}
+\newenvironment{proofof}[1]{\begin{trivlist}
+                       \item[]\hspace{0cm}{\bf Proof of #1: }
+                       \\ }{\hfill $\blacksquare$
+                     \end{trivlist}}
+                     
+\begin{document}
+
+\title {Transform\'ee de Fourier, ses variantes et quelques applications\\TP3}
+\author{}
+\date{}
+\maketitle
+\section{Motivation du TP}
+En pratique, on n'a jamais acc\`es \`a une fonction $f$ quÕelle soit dans  $L^2(\mathbb{R})$ ou dans  $L^2([-T/2,T/2])$ 
+mais seulement \`a un nombre fini dÕ\'echantillons $f[k]= f (k\delta),~~k=0,1,\ldots,N-1$  o\`u  $\delta $ est un pas dÕ\'echantillonage. (qui est li\'e 
+\`a une fr\'equence d'\'echantillonnage). Pour que les choses se passent correctement, il faut que la condition de Nyqvist-Shannon soit v\'erifi\'ee : la fr\'equence d'\'echantillonnage doit \^etre sup\'erieure (au sens large) \`a deux fois la fr\'equence 
+maximale contenue dans le signal. Se pose alors la question de savoir comment passer de l'analogique au discret? D'une mani\`ere \'equivalente se pose la question de savoir comment d\'efinir la  transform\'ee de Fourier d'un tel signal? 
+Une id\'ee simple est de discr\'etiser l'int\'egrale donnant les coefficients de Fourier du signal qui est connu sur une dur\'ee finie : il faudra voir les $f[k],~k=0,\ldots,N-1$  comme
+ les \'echantillons d'une fonction $N\delta$-p\'eriodique, et de d\'efinir des coefficients de Fourier \`a  l'aide dÕune somme de Riemann.  
+ Comme pour la transform\'ee de Fourier, il faudra aussi penser \`a d\'efinir  une transform\'ee de Fourier discr\`ete inverse pour la reconstruction.  
+\section{Transform\'ee de Fourier discr\`ete}
+\begin{definition}
+On appelle transform\'ee de Fourier discr\`ete de la suite $(y_k),~k=0,~ldots,N-1$ la suite $(z_k)$ d\'efinie par 
+$$
+z_k=\cfrac{1}{N}\sum_{p=0}^{N-1}y_p\omega^{pk}
+$$
+o\`u $\omega=e^{-2i\frac{\pi}{N}}$. On notera $z[k]=DFT[f]k],~k=0,\ldots,N-1$.
+\end{definition}
+Cette transformation est lin\'eaire; on va  trouver la matrice $A$ carr\'ee d'ordre $N$ associ\'ee. On peut montrer que  si on note $y=(y_0,y_1,\ldots,y_k,\ldots,y_{N-1})^T$ et $z=(z_0,z_1,\ldots,z_k,\ldots,z_{N-1})^T$ on a alors $z=Ay$ o\`u 
+$$
+A=\cfrac{1}{N}\left(
+\begin{array}{lllll}
+1&1&1& \ldots&1\\
+1&\omega&\omega^2&\ldots&\omega^{N-1}\\
+1&\omega^2&\omega^4&\ldots&\omega^{2(N-1)}\\
+1&\omega^3&\omega^6&\ldots&\omega^{3(N-1)}\\
+\vdots&\vdots&\vdots&&\vdots\\
+1&\omega^{N-1}&\omega^{2(N-1)}&\ldots&\omega^{(N-1)^2}
+\end{array}
+\right)
+$$
+\textbf{Question 1: ~} Cette partie s'inspire du TP de MT12 A1009 r\'edig\'ee par Vincent Robin. L'auteur de cette fiche a modifi\'e l\'eg\`erement le contenu. 
+\begin{enumerate}
+\item
+Montrer que $\sum_{k=0}^{N-1}\omega^{k(p-p')N}=\left\{\begin{array}{lll} 0 &~\text{si}~&p\neq p'\\N&~\text{si}~&p=p'\end{array}\right.$
+\item
+En d\'eduire que  $\sqrt{N} A$ est une matrice \textbf{unitaire}. 
+\par
+\noindent
+(On parle dans le cas r\'eel de matrice orthogonale lorsque les vecteurs colonnes de la matrice sont orthonorm\'es. Dans le cas 
+complexe, on parle de matrice unitaire. On prendra soin de prendre comme produit scalaire $\langle a, b\rangle=\sum_{i=1}^N a_i \overline{b}_i$ lorsque 
+$a=(a_i)_{i=1,\ldots,N}$ et $b=(a_i)_{i=1,\ldots,N}$ sont \`a valeurs complexes). 
+\item
+En d\'eduire $A^{-1}$ et l'expression de l'inverse de la transform\'ee inverse de la DFT.  On se rappellera de la question 1) que $B=\sqrt{N}A$ est une matrice unitaire et donc que l'inverse de $B$ est \'egale \`a sa transconjugu\'ee : $B^{-1}=(\overline{B})^T$.
+\end{enumerate}
+\subsection{DFT d'une fonction }
+Soit $f$ d\'efinie  sur une p\'eriode $T$ (p\'eriodique de p\'eriode $T$) et soit $y_k$ une suite d'\'echantillons de $f$ en $N$ points uniform\'ment r\'epartis sur une p\'eriode. La DFT de $f$ d'ordre $N$ est l'application qui associe \`la suite $(y_k)_{k=0,\ldots,N-1}$ la suite constitu\'ee de la DFT appliqu\'ee au   vecteur $y=(y_k)_{k=0,\ldots,N-1}$. On note $(DFT[f](k))_{0,\ldots,N-1}$ la suite obtenue et $iDFT$ sa r\'eciproque.
+\begin{enumerate}
+ \item
+ Montrer comment approcher le coefficient de Fourier $c_n$ \`a partir de l'approximation de l'int\'egrale  la d\'efinissant par une somme de Riemann. 
+\item
+Quelle relation peut-on \'etablir  entre coefficients de Fourier et lDFT?
+\end{enumerate}
+\subsection{Une famille de fonctions tests}
+Dans cette partie, nous d\'efinissons une ''biblioth\`eque'' de fonctions tests index\'es :   pour $\alpha>0$ et $T>0$ (ce sera la p\'eriode), on consid\`ere la fonction $f_{\alpha,T}$ T p\'eriodique d\'efinie sur une p\'eriode par  
+$$
+f_{\alpha,T}(x)=\left\{
+\begin{array}{lll}
+1 &\text{~si~}& x\in \Big]-\cfrac{\alpha T}{2},\cfrac{\alpha T}{2}\Big[\\
+0&\text{~si~}& x\in \Big[-\cfrac{T}{2},\cfrac{T}{2}\Big]\backslash  \Big]-\cfrac{\alpha T}{2},\cfrac{\alpha T}{2}\Big[
+\end{array}
+\right.
+$$
+\begin{enumerate}
+\item
+Ecrire une proc\'edure  SCILAB permettant de construire $f_{\alpha,T}$ sur un vecteur de coordonn\'ees. 
+\item
+Quel pas d'\'echantillonnage doit on prendre pour r\'ecup\'erer des signaux discrets p\'eriodiques de p\'eriode $N$. 
+\item
+On suppose $T=1$ et $\alpha=\cfrac{1}{3}$.  Tracer le graphe de $f_{\alpha,T}$ sur $k$ p\'eriodes, avec $k=1,2,3$ et ses versions \'echantillonn\'ees avec $N=4,8,32.$
+\end{enumerate}
+\subsection{Efficacit\'e de la FFT pour l'approximation des coefficients de Fourier}
+Soit $f$ une fonction echantillonn\'ee sur $[-\cfrac{T}{2},\cfrac{T}{2}]$ par $N$ \'echantillons uniform\'ment espac\'es : le pas d'\'echantillonnage est $T_e=\cfrac{a}{N}$. 
+\begin{itemize}
+\item
+Ecrire un programme Scilab permettant de calculer la transform\'ee DFT  de $f$  (et donc $F_e=\cfrac{1}{T_e}$ est la fr\'equence d'\'echantillonnage).  Appliquer \`a $f=f_{\alpha,T}$ avec $\alpha=\cfrac{1}{3}$ et $T=1$. 
+\item
+Comparer avec la commande FFT de scilab (attention : on devra diviser le vecteur FFT par $N$). On utilisera le commande \textbf{timer} de Scilab pour la comparaison de la vitesse d'ex\'ecution. 
+\item
+Sur 3 graphiques s\'epar\'es g\'en\'er\'es \`a l'aide de la commande subplot, tracer les histogrammes permettant de repr\'esenter les coefficients de Fourier, la DFT appliqu\'ee \`a la suite form\'ee des \'echantillons ainsi que la FFT. On fera varier $N=2^k,~k=2,\ldots,16$.
+%\item
+%\textbf{Facultatif: ~}On testera sur des signaux simples $f_{\alpha,T}$ en faisant varier $\alpha.$
+\end{itemize}
+%\par
+%\noindent
+%\medskip
+%\par
+%\noindent
+%\textbf{Modification de votre programme} Modifiez votre ''fonction dit"" pour qu'elle incorpore la transform\'ee de Fourier inverse $iDFT$.  Cette proc\'dure aura l'allure 
+%\textbf{fonction $Y=fourier(s,a)$}; lorsque $a=0$ on appelle la DFT et si $=1$ la iDFT son inverse. 
+\subsection{Transform\'ee de Fourier discr\`ete et r\'esolution fr\'equentielle de signaux}
+\textbf{Un premier exercice d'application ou de deuxi\`eme ''mise en jambes''}
+\par
+\noindent
+Le but de l'exercice est  de montrer comment la TFD permet de retrouver le spectre d'un signal. On consid\`ere le signal 
+$$
+s(t)=\sin{(2\pi 50 t)}+ 3 \sin{(2\pi 120 t)}.
+$$
+\begin{enumerate}
+\item
+D\'eterminer la p\'eriode $T$ du signal.
+\item
+Quelles sont les fr\'equences pr\'esentes dans le signal? 
+\item
+Pour pouvoir calculer la TFD, on va pr\'elever un \'echantillon de $N$ points pris tous les temps $T_e$.  Donner une relation entre $N$, $T$ et $T_e$. Le but de la question est de saisir la diff\'errence entre 
+$T$ et $T_e$.
+\item
+Comment choisir $T_e$? (Penser \`a la condition de Shannon permettant de donner une fr\'equence  $F_e$ d'Ö'echantillonnage  compatible et prendre ensuite $T_e=\cfrac{1}{T_e}$). 
+\item
+ A l'aide de la TFD, visualiser  les raies spectrales en affichant le spectre d'amplitude.
+\item
+Comparer avec les r\'esultats donn\'es par la fft de scilab
+\end{enumerate}
+\textbf{Un exercice de la m\^eme trempe''}
+\par
+\noindent
+Dans cette partie, vous devrez \'echantillonner  le signal (ou la fonction) comme lors de l'acquisition en num\'erique \`a partir de l'analogique (analogique signifie que le signal est connu en continu et est fonction d'une variable $t$ (exemple $t\in [0,1]$.  On l'\'echantillonne en temps avec un pas $T_e=\cfrac{1}{F_e}$, le nombre d'\'echantillons sur $[0,T]$ est donn\'e par $N=F_eT$.  On d\'efinit  alors un vecteur de coordonn\'ees temporel : la premi\`ere composante de ce vecteur est la valeur du signal au temps $t=0$ et les autres composantes s'obtiennent comme la valeur du signal en les points uniform\'ment r\'epartis s\'epar\'es  de $T_e=\cfrac{1}{F_e}$ (\'echantillonnage en temps). On a un vecteur de $\mathbb{R}^N$. Dans le domaine fr\'equentiel, on a aussi un vecteur de coordonn\'ees en fr\'equence.
+\par
+\noindent
+Soit $s$ un signal de dur\'ee $T$ (on supposera  qu'on le connait sur $[0,T]$). On suppose qu'il est acquis en discret apr\`es l'avoir \'echantillonn\'e en pas de fr\'equence d'\'echantillonnage $F_e$.  Apr\`es avoir \'echantillonn\'e un signal non p\'eriodique dans le domaine temporel on obtient un spectre p\'eriodique discret de p\'eriode $N$.  Vous testerez \`a titre d'exercice le probl\`eme suivant 
+\begin{enumerate}
+\item
+Construire un ''vecteur temps'' d'une dur\'ee $T=1/10$ secondes \'echantillonn\'e \`a une fr\'equence $F_e=1000\text{~Hz~}$. 
+\item
+Tracez (\`a l'aide de la commande bar en scilab ou stem en matlab) en temps les valeurs que prend le signal aux points d'\'echantillons. On prendra un signal  sinusoidal $s(t)=\sin{2\pi~30t}$ de fr\'equence $30\text{~Hz~}$. 
+\item
+Tracez la fft (ou la DFT) du ''vecteur temps''.
+\item
+M\^eme question pour $s_1(t)=\sin{2\pi 40}$ de fr\'equence $40 \text{~~Hz}$. 
+\item
+Tracez la DFT des vecteurs temps correspondant \`a $s$ et \`a $s_1$. 
+\item
+Nous prenons un signal (sinusoidal ) de fr\'equence $312\text{~Hz~}$ \`a une fr\'equence $F_e$ variant de 750 Hz \`a 500 Hz avec un pas de 
+50 hz. Montrez que la fr\'equence est bien construite (donc via la FFT normalis\'ee) tant que la fr\'equence d'\'echantillonnage est sup\'erieure 
+\`a $624=2\times 312$ Hz. 
+\item
+Bien r\'exiger cette partie en recopiant la preuve des th\'eor\`mes de Poisson et de Shannon. On l'illustrera avec le programme $essai_DFT.sce$
+\textbf{Indications:~~}Pour g\'en\'erer un son de fr\'equence $F$ pendant $n$ secondes, on utilisera la commande $ t=soundsec(n,F)$. Pour l'\'ecouter, on tapera $playsnd(s)$ apr\`es avoir d\'efini le signal $s$. 
+\end{enumerate}
+\subsection{DFT et Convolution}
+\begin{enumerate}
+\item
+D\'efinir le produit de convolution $x*y$  de deux suites discr\`etes $x=(x_n)_{n=0,\ldots}$ et $y=(y_n)_{n=0,\ldots,N-1}$ p\'eriodiques de p\'eriode $N$.
+\item
+Montrer qu'il existe une relation entre $DFT(x*y)$ et le produit des DFT $DFT(x).DFT(y).$
+\item
+Illustrer  sur l'exemple $f_{\alpha,T}*f_{\alpha,T}$ avec $\alpha=\cfrac{1}{3}$ et $T=1$.  On prendra $N$ grand et on repr\'esentera  les \'echantillons de $f_{\alpha,T}*f_{\alpha,T}$.
+\end{enumerate}
+\subsection{Ph\'enom\`ene de Gibbs}
+Soit  la fonction de Heaviside $H(x)=1$ si $x\ge 0$ et $H(x)=-1$ sinon. On \'echantillonne  $f$ sur un intervalle $[-a,a],~a>0$ avec un pas $h$. 
+\begin{enumerate}
+\item
+Calculer la FFT de $f$.
+\item
+On ne voudrait conserver que les coefficients de la FFT dont la fr\'equence est dans l'intervalle $(-\lambda_0,\lambda_0),~\lambda<\cfrac{\pi}{h}$. Par exemple prendre $h$ tel que la fr\'equence d'\'echantillonage est autour 14000Hz avec une fr\'equence de coupure $\lambda\simeq 650\text{~Hz~}. $
+\item
+Qu'observe-t-on lorsqu'on reconstruit le signal avec la FFT inverse?
+\item
+Faire varier $\lambda_0$ et commenter.
+\end{enumerate}
+%\subsection{Transform\'ee de Fourier discr\`ete et r\'esolution fr\'equentielle de signaux}
+%Dans cette partie, vous devrez \'Žchantillonner  le signal (ou la fonction) comme lors de l'acquisition en num\'erique \`a partir de l'analogique (analogique signifie que le signa est connue en continue et est fonction d'une variable $t$ ''continue'' (exemple $t\in [0,1]$.  On l'\'echantillonne en temps avec un pas $T_e=\cfrac{1}{F_e}$, le nombre d'\'Žchantillons sur $[0,T]$ est donn\'e par $N=F_eT$.  On d\'efinit  alors un vecteur de corrdonn\'ees temporel : la premi\`ere composante de ce vecteur est la valeur du signal au temps $t=0$ et les autres composantes s'obtiennent via le pas d'\'echantillonnage $T_e=\cfrac{1}{F_e}$. On a un vecteur de $\mathbb{R}^N$. Dans le domaine fr\'equentiel, on a aussi un vecteur de coordonn\'des en fr\'equence.
+%\par
+%\noindent
+%Soit $s$ un signal de dur\'ee $T$ (on supposera  qu'on le connait sur $[0,,T]$). On suppose qu'il est acquis en discret apr\`es avoir \'echantillonn\'e en pas de fr\'equence d'\'echantillonnage $F_e$.  Apr\`es avoir \'echantillonn\'e un signal non p\'eriodique dans le domaine temporel on obtient un spectre p\'eriodique discret de p\'eriode $N$.  Vous testerez \`a titre d'exercice le probl\`eme suivant 
+%\begin{enumerate}
+%\item
+%Construire un ''vecteur temps'' d'une dur\'ee $T=1/10$ secondes \'echantillonn\'e \`a une fr\'equence $F_e=1\text{~Hz~}$. 
+%\item
+%Tracez (\`a l'aide la commande bar en scilab ou stem en matlab) en temps les valeurs que prend le signal aux points d'\'echantillons. On prendra un signal 
+%sinusoidal $s(t)=\sin{2\pi~30t}$ de fr\'equence $30\text{~Hz~}$. 
+%\item
+%Tracez la fft (ou la DFT) du ''vecteur temps''.
+%\item
+%M\^eme question pour $s_1(t)=\sin{2\pi 40}$ de fr\'equence $40 \text{~~Hz}$. 
+%\item
+%Tracez la DFT des vecteurs temps correspondant \`a $s$ et \`a $s_1$. 
+%\item
+%Nous prenons un signal (sinuso•dal ) de fr\'equence $312\text{~Hz~}$ \`a une fr\'equence $F_e$ variant de 750 Hz \`a 500 Hz avec un pas de 
+%50 hz. Montrez que la fr\'equence est bien construite (donc via la FFT normalis\'ee) tant que la fr\'equence d'\'Žchantillonnage est sup\'erieure 
+%\`a $624=2\times 312$ Hz. 
+%\item
+%En faisant une recherche de documents sur la toile, montrer que cet exemple est une illustration du th\'eor\`eme de Shannon.
+%\item
+%\textbf{Remarque:~~} On pourra faire un programme Scilab permettant de visualiser chacune des reconstructions \`a l'aide des commandes pause, drawlater et drawnow. 
+%\end{enumerate}
+\subsection{Facultatif :Analyse d'un signal audio}
+\begin{enumerate}
+\item
+Charger un signal audio de votre choix (son d'un instrument par exemple) et l'\'echantillonner \`a une fr\'equence $F_e=8000\text{~Hz~}$. On  notera  $T$ sa dur\'ee. 
+\item
+Repr\'esenter sur un m\^eme graphique le signal sur $1s$,$0.5 s$ sur $0.1 s$ et $0.01 s$. Observez vous une p\'eriodicit\'e?
+\item
+Faire la FFT sur ces diff\'erents temps.
+\item
+Afficher la tranche de fr\'equences situ\'ees dans $[50,1000].$
+\subsection{Effet du fen\^etrage}
+Un signal est d\'efini sur $\mathbb{R}$ en g\'en\'eral. Le fait de ne l'observer que sur une plage de temps finie et de ne traiter qu'un nombre fini 
+d'\'echantillons engendre des erreurs. Le but de l'exercice est de mettre en \'evidence ces erreurs. 
+\par
+\noindent
+La fonction cible est $f(t)=A e^{-2i\pi\lambda t}$. Ce signal est monochromatique 
+\begin{enumerate}
+\item
+Calculer la DFT de $f$ avec un \'echantillonnage  $N=2^p,~4\le p\le 9$.
+\item
+Comparer avec la transform\'ee exacte
+\end{enumerate}
+\subsection{Facultatif : Comment enlever du bruit d'un signal}
+Soit $s=(s_i)_{i=1,\ldots,n}$ un signal ''propre'' \'echantillonn\'e auquel on ajoute un vecteur $r=(r_i)_{i=1,\ldots,n}$ de m\^eme taille. On a donc $x=s+r$ un signal bruit\'e et on nous demande de trouver  $s$ (ou du moins une approximation)   Bien s\^ur $r$ est non corr\'el\'e avec $s$ ce qui signifie que $s^Tr=0.$ L'id\'ee de Norbert Wiener est de construire un filtre optimal permettant de se d\'ebarrasser  du bruit; pour cela il sugg\'era la construction d'une matrice diagonale $D$ telle que 
+$$
+\parallel \mathcal{F}^{-1}D \mathcal{F}x-s\parallel_2
+$$
+soit la plus petite possible.  C'est un crit\`ere dit  au sens des moindres carr\'es. L'id\'ee est d'appliquer la transform\'ee de Fourier au signal $x$, d'op\'erer en fr\'equence et d'appliquer une transform\'ee de Fourier inverse. On note $D=diag(d_1,d_2,\ldots,d_n)$, $C=\mathcal{F}c$ et $R=\mathcal{F}r$.
+\begin{enumerate}
+\item
+Montrer que 
+$$
+\parallel \mathcal{F}^{-1}D \mathcal{F}x-s\parallel_2^2=\sum_{i=1}^n \Big((d_i-1)^2 \mid C_i\mid^2 +d_i^2\mid R_i\mid^2\Big).
+$$
+\item
+En d\'erivant par rapport \`a $d_i$, montrer que la matrice diagonale $D$ optimale est celle dont les \'el\'ements  diagonaux v\'erifient 
+$$
+d_i=\cfrac{\mid C_i\mid^2}{\mid C_i\mid^2+\mid R_i\mid^2},~i=1,\ldots,n.
+$$
+\item
+Dites pourquoi on peut approcher $\mid X_i\mid^2\sim \mid C_i\mid^2+\mid R_i\mid^2$,~i=1,\ldots,n?
+\item
+En d\'eduire l'approximation
+$$
+d_i\sim \cfrac{\mid X_i\mid^2-\mid R_i\mid^2}{\mid X_i\mid^2}
+$$
+\item
+Nous devons avoir les informations \`a propos du  bruit. Par exemple, le  bruit est Gaussien : on suppose que $R_i=(p\sigma)^2$ o\`u $p\simeq1.3$ et $\sigma$ est la d\'eviation standard du bruit. On pourra ajouter cinquante pour cent de bruit au signal.
+\item
+Ecrire un programme scilab permettant de d\'ebruiter un son de votre choix que vous aurez \'echantillonn\'e sur 40000\'echantillons.  On comparera les sons du signal de d\'epart, le signal bruit\'e et le signal ''nettoy\'e''.
+\end{enumerate}
+\subsection{Facultatif:~~Compression d'images}
+\begin{itemize}
+\item
+Charger lena.scv l'image $512\times 512$ dans une matrice $l$.
+\item
+Afficher le module de la FFT de l'image. V\'erifier la sym\'etrie des modules,  la d\'ecroissance des coefficients. 
+\item
+V\'erifier l'identit\'e de Parseval.
+\item
+A l'aide de la commande fft2, calculer la FFT de l'image. 
+\item
+Afficher $(log(abs(fftshift(l)))).$
+\item
+Mettre \`a z\'ero toute composante de module inf\'erieure \`a un seuil que vous aurez choisi.
+\item
+Que remarque-t-on apr\`es l'application de la transform\'ee inverse?
+\end{itemize}
+%Aide se trouve dans Signal proc TP-Sampling2009 (tiret bas au lieu de l'espace blanc.)
+\end{enumerate}
+\end{document}
+\end{document}

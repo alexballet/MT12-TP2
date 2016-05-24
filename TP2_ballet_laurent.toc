@@ -1,6 +1,13 @@
 \select@language {french}
-\contentsline {chapter}{\numberline {1}S\'erie de Fourier}{4}
-\contentsline {chapter}{\numberline {2}\'Etude de fonctions}{5}
-\contentsline {chapter}{\numberline {3}Ph\'enom\`ene de Gibbs}{6}
-\contentsline {chapter}{\numberline {4}Application des s\'erie de Fourier}{7}
-\contentsline {chapter}{\numberline {5}Equation de la chaleur}{8}
+\contentsline {chapter}{\numberline {1}D\'efinition de la DFT}{4}
+\contentsline {section}{\numberline {1.1}D\'efinition}{4}
+\contentsline {section}{\numberline {1.2}DFT d'une fonction}{7}
+\contentsline {chapter}{\numberline {2}Une famille de fonctions tests}{9}
+\contentsline {chapter}{\numberline {3}Applications de la DFT}{10}
+\contentsline {section}{\numberline {3.1}Approximation des coefficients de Fourier}{10}
+\contentsline {section}{\numberline {3.2}R\'esolution fr\'equentielle de signaux}{10}
+\contentsline {subsection}{\numberline {3.2.1}Mise en jambes}{10}
+\contentsline {subsection}{\numberline {3.2.2}Exercice}{10}
+\contentsline {chapter}{\numberline {4}DFT et convolution}{11}
+\contentsline {chapter}{\numberline {5}Ph\'enom\`ene de Gibbs}{12}
+\contentsline {chapter}{\numberline {6}Effet du fen\^etrage}{13}
