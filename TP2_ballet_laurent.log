@@ -1,6 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.21)  24 MAY 2016 17:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.18)  31 MAY 2016 14:29
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **TP2_ballet_laurent.tex
 (./TP2_ballet_laurent.tex
@@ -897,60 +898,194 @@ Overfull \hbox (28.2965pt too wide) in alignment at lines 131--167
 
 [5] [6] [7] [8]
 Chapitre 2.
-[9
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 224.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 229.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 232.
+
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [9
 
 ]
+<FigEx2_2N4.png, id=55, 640.3925pt x 294.09875pt>
+File: FigEx2_2N4.png Graphic file (type png)
+ <use FigEx2_2N4.png>
+Package pdftex.def Info: FigEx2_2N4.png used on input line 251.
+(pdftex.def)             Requested size: 320.19547pt x 147.04901pt.
+
+
+./TP2_ballet_laurent.tex:252: LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.252 \caption
+              {\textit{Repr\'esentation pour N=4}}
+? r
+OK, entering \nonstopmode...
+./TP2_ballet_laurent.tex:252: Undefined control sequence.
+\caption ... \endcsname \fi \fi \@dblarg {\@tempf 
+                                                  \@captype }
+l.252 \caption
+              {\textit{Repr\'esentation pour N=4}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./TP2_ballet_laurent.tex:252: Undefined control sequence.
+\caption ...e \fi \fi \@dblarg {\@tempf \@captype 
+                                                  }
+l.252 \caption
+              {\textit{Repr\'esentation pour N=4}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<FigEx2_2N8.png, id=56, 640.3925pt x 294.09875pt>
+File: FigEx2_2N8.png Graphic file (type png)
+ <use FigEx2_2N8.png>
+Package pdftex.def Info: FigEx2_2N8.png used on input line 256.
+(pdftex.def)             Requested size: 320.19547pt x 147.04901pt.
+
+
+./TP2_ballet_laurent.tex:257: LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.257 \caption
+              {\textit{Repr\'esentation pour N=8}}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./TP2_ballet_laurent.tex:257: Undefined control sequence.
+\caption ... \endcsname \fi \fi \@dblarg {\@tempf 
+                                                  \@captype }
+l.257 \caption
+              {\textit{Repr\'esentation pour N=8}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./TP2_ballet_laurent.tex:257: Undefined control sequence.
+\caption ...e \fi \fi \@dblarg {\@tempf \@captype 
+                                                  }
+l.257 \caption
+              {\textit{Repr\'esentation pour N=8}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<FigEx2_2N32.png, id=57, 640.3925pt x 294.09875pt>
+File: FigEx2_2N32.png Graphic file (type png)
+ <use FigEx2_2N32.png>
+Package pdftex.def Info: FigEx2_2N32.png used on input line 261.
+(pdftex.def)             Requested size: 320.19547pt x 147.04901pt.
+
+
+./TP2_ballet_laurent.tex:262: LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.262 \caption
+              {\textit{Repr\'esentation pour N=32}}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./TP2_ballet_laurent.tex:262: Undefined control sequence.
+\caption ... \endcsname \fi \fi \@dblarg {\@tempf 
+                                                  \@captype }
+l.262 \caption
+              {\textit{Repr\'esentation pour N=32}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./TP2_ballet_laurent.tex:262: Undefined control sequence.
+\caption ...e \fi \fi \@dblarg {\@tempf \@captype 
+                                                  }
+l.262 \caption
+              {\textit{Repr\'esentation pour N=32}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[10 <./FigEx2_2N4.png> <./FigEx2_2N8.png> <./FigEx2_2N32.png>]
 Chapitre 3.
-[10
-
-]
-Chapitre 4.
 [11
+
+] [12] [13]
+Chapitre 4.
+[14
 
 ]
 Chapitre 5.
-[12
+[15
 
 ]
 Chapitre 6.
-[13
+[16
 
 ] (./TP2_ballet_laurent.lof)
 \tf@lof=\write5
 \openout5 = `TP2_ballet_laurent.lof'.
 
- [14
+ [17
 
 ] (./TP2_ballet_laurent.aux) ) 
 Here is how much of TeX's memory you used:
- 17262 strings out of 493089
- 324046 string characters out of 6134841
- 486232 words of memory out of 5000000
- 20367 multiletter control sequences out of 15000+600000
- 51224 words of font info for 43 fonts, out of 8000000 for 9000
+ 18820 strings out of 493089
+ 341916 string characters out of 6134841
+ 536232 words of memory out of 5000000
+ 21911 multiletter control sequences out of 15000+600000
+ 58911 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,14n,72p,464b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,14n,72p,464b,2466s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvi
-ps/lm/lm-rm.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-maths
-y.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/us
-r/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/te
-xlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2015/tex
-mf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2015/texmf-dist/fo
-nts/type1/public/lm/lmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
-public/lm/lmmi12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/
-lmmi6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2015
-/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2015/texmf-dist/
-fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
-1/public/lm/lmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/l
-m/lmsy6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsy8.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10
-.pfb>
-Output written on TP2_ballet_laurent.pdf (14 pages, 309371 bytes).
+ps/lm/lm-ts1.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-ec.e
+nc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local
+/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2
+015/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2015/texmf-
+dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2015/texmf-dist/fonts
+/type1/public/lm/lmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
+lic/lm/lmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmm
+i12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2015/
+texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2015/texmf-dist/
+fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
+public/lm/lmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lm
+ri12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/
+texlive/2015/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on TP2_ballet_laurent.pdf (17 pages, 386226 bytes).
 PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
- 83 compressed objects within 1 object stream
+ 143 PDF objects out of 1000 (max. 8388607)
+ 100 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

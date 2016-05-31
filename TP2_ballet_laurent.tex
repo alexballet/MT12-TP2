@@ -218,12 +218,83 @@ Printemps 2016
 	
 %Question 2.2
 \chapter{Une famille de fonctions tests}
+	
+	\section{Proc\'edure Scilab}
+\begin{lstlisting}
+_T = 1 
+_alpha=1/3
+
+
+function [y] = f(x)
+    x=[pmodulo(x + _T/2,_T) - _T/2]
+    y = zeros(x)
+    for i=1:length(x)
+        if (x(i) <_T*_alpha/2 & x(i)>-_T*_alpha/2) then
+            y(i)=1
+        
+         else
+            y(i) = 0
+        end
+    end
+endfunction
+
+N = 32
+
+
+x=[-3*_T/2:_T/N:3*_T/2]
+scf(0)
+clf
+plot(x,f(x),'xr')
+		\end{lstlisting}\newpage
+
+\begin{center}
+\includegraphics[scale=0.5]{FigEx2_2N4.png}\\
+\caption{\textit{Repr\'esentation pour N=4}}
+\end{center}
+
+\begin{center}
+\includegraphics[scale=0.5]{FigEx2_2N8.png}\\
+\caption{\textit{Repr\'esentation pour N=8}}
+\end{center}
+
+\begin{center}
+\includegraphics[scale=0.5]{FigEx2_2N32.png}\\
+\caption{\textit{Repr\'esentation pour N=32}}
+\end{center}
 
 %Questions 2.3 et 2.4
 \chapter{Applications de la DFT}
 
 	%Question 2.3
 	\section{Approximation des coefficients de Fourier}
+\begin{lstlisting}
+//****************
+//Calcul de la DFT
+//****************
+f0=312;
+N=1024;//numérisation
+for Fe=2000:-50:500
+    //instants de mesure
+    t=(0:N-1)/Fe;
+    //signal temporel
+    x=sin(2*%pi*f0*t)+sin(2*%pi*t*500)
+    //calcul de la FFT du signal;
+    X=fft(x);
+    [mx,p]=max(abs(X(1:N/2)));
+    //trace du spectre entre -Fe/2 et Fe/2
+    f=(-fix(N/2):N-fix(N/2)-1)/N*Fe;
+    figure(0)
+    //Desactivation des commandes graphiques
+    drawlater;
+    clf();
+ title(['spectre sinusoide de freq'+string(f0)+'Hz numer a '+string(Fe)+'Hz'])
+h=gce();
+plot(f,abs(fftshift(X)))
+drawnow
+//xpause(200000)
+xclick
+end
+\end{lstlisting}\newpage
 
 	%Question 2.4
 	\section{R\'esolution fr\'equentielle de signaux}
