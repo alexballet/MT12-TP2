@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.18)  31 MAY 2016 14:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.18)  5 JUN 2016 01:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -846,38 +846,38 @@ Package pdftex.def Info: logo_utc.png used on input line 42.
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./logo_
 utc.png>]
 [2] (./TP2_ballet_laurent.toc
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 3.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 4.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 3.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 4.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 3.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 4.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 3.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 4.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 3.
+(Font)              <12> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 3.
+(Font)              <8> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 3.
-LaTeX Font Info:    Try loading font information for U+msa on input line 3.
+(Font)              <6> on input line 4.
+LaTeX Font Info:    Try loading font information for U+msa on input line 4.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 3.
+LaTeX Font Info:    Try loading font information for U+msb on input line 4.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -892,48 +892,52 @@ Chapitre 1.
 [4
 
 ]
-Overfull \hbox (28.2965pt too wide) in alignment at lines 131--167
+Chapitre 2.
+[5
+
+]
+Overfull \hbox (28.2965pt too wide) in alignment at lines 134--170
  [][][] []
  []
 
-[5] [6] [7] [8]
-Chapitre 2.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 224.
+[6] [7] [8] [9]
+Chapitre 3.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 227.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 229.
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 232.
+(Font)              <10.95> on input line 232.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 235.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [9
+) [10
 
 ]
-<FigEx2_2N4.png, id=55, 640.3925pt x 294.09875pt>
+<FigEx2_2N4.png, id=58, 640.3925pt x 294.09875pt>
 File: FigEx2_2N4.png Graphic file (type png)
  <use FigEx2_2N4.png>
-Package pdftex.def Info: FigEx2_2N4.png used on input line 251.
+Package pdftex.def Info: FigEx2_2N4.png used on input line 254.
 (pdftex.def)             Requested size: 320.19547pt x 147.04901pt.
 
 
-./TP2_ballet_laurent.tex:252: LaTeX Error: \caption outside float.
+./TP2_ballet_laurent.tex:255: LaTeX Error: \caption outside float.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.252 \caption
+l.255 \caption
               {\textit{Repr\'esentation pour N=4}}
 ? r
 OK, entering \nonstopmode...
-./TP2_ballet_laurent.tex:252: Undefined control sequence.
+./TP2_ballet_laurent.tex:255: Undefined control sequence.
 \caption ... \endcsname \fi \fi \@dblarg {\@tempf 
                                                   \@captype }
-l.252 \caption
+l.255 \caption
               {\textit{Repr\'esentation pour N=4}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -941,10 +945,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./TP2_ballet_laurent.tex:252: Undefined control sequence.
+./TP2_ballet_laurent.tex:255: Undefined control sequence.
 \caption ...e \fi \fi \@dblarg {\@tempf \@captype 
                                                   }
-l.252 \caption
+l.255 \caption
               {\textit{Repr\'esentation pour N=4}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -952,28 +956,28 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<FigEx2_2N8.png, id=56, 640.3925pt x 294.09875pt>
+<FigEx2_2N8.png, id=59, 640.3925pt x 294.09875pt>
 File: FigEx2_2N8.png Graphic file (type png)
  <use FigEx2_2N8.png>
-Package pdftex.def Info: FigEx2_2N8.png used on input line 256.
+Package pdftex.def Info: FigEx2_2N8.png used on input line 259.
 (pdftex.def)             Requested size: 320.19547pt x 147.04901pt.
 
 
-./TP2_ballet_laurent.tex:257: LaTeX Error: \caption outside float.
+./TP2_ballet_laurent.tex:260: LaTeX Error: \caption outside float.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.257 \caption
+l.260 \caption
               {\textit{Repr\'esentation pour N=8}}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-./TP2_ballet_laurent.tex:257: Undefined control sequence.
+./TP2_ballet_laurent.tex:260: Undefined control sequence.
 \caption ... \endcsname \fi \fi \@dblarg {\@tempf 
                                                   \@captype }
-l.257 \caption
+l.260 \caption
               {\textit{Repr\'esentation pour N=8}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -981,10 +985,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./TP2_ballet_laurent.tex:257: Undefined control sequence.
+./TP2_ballet_laurent.tex:260: Undefined control sequence.
 \caption ...e \fi \fi \@dblarg {\@tempf \@captype 
                                                   }
-l.257 \caption
+l.260 \caption
               {\textit{Repr\'esentation pour N=8}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -992,28 +996,28 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<FigEx2_2N32.png, id=57, 640.3925pt x 294.09875pt>
+<FigEx2_2N32.png, id=60, 640.3925pt x 294.09875pt>
 File: FigEx2_2N32.png Graphic file (type png)
  <use FigEx2_2N32.png>
-Package pdftex.def Info: FigEx2_2N32.png used on input line 261.
+Package pdftex.def Info: FigEx2_2N32.png used on input line 264.
 (pdftex.def)             Requested size: 320.19547pt x 147.04901pt.
 
 
-./TP2_ballet_laurent.tex:262: LaTeX Error: \caption outside float.
+./TP2_ballet_laurent.tex:265: LaTeX Error: \caption outside float.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.262 \caption
+l.265 \caption
               {\textit{Repr\'esentation pour N=32}}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-./TP2_ballet_laurent.tex:262: Undefined control sequence.
+./TP2_ballet_laurent.tex:265: Undefined control sequence.
 \caption ... \endcsname \fi \fi \@dblarg {\@tempf 
                                                   \@captype }
-l.262 \caption
+l.265 \caption
               {\textit{Repr\'esentation pour N=32}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1021,10 +1025,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./TP2_ballet_laurent.tex:262: Undefined control sequence.
+./TP2_ballet_laurent.tex:265: Undefined control sequence.
 \caption ...e \fi \fi \@dblarg {\@tempf \@captype 
                                                   }
-l.262 \caption
+l.265 \caption
               {\textit{Repr\'esentation pour N=32}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1032,34 +1036,395 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[10 <./FigEx2_2N4.png> <./FigEx2_2N8.png> <./FigEx2_2N32.png>]
-Chapitre 3.
-[11
+[11 <./FigEx2_2N4.png> <./FigEx2_2N8.png> <./FigEx2_2N32.png>]
+Overfull \hbox (7.13698pt too wide) in paragraph at lines 270--273
+\T1/lmr/m/n/12 L[]Èchantillonnage d˙n si-gnal $\OML/lmm/m/it/12 f\OT1/lmr/m/n/1
+2 (\OML/lmm/m/it/12 t\OT1/lmr/m/n/12 )$ \T1/lmr/m/n/12 ana-lo-gique re-prÈ-sent
+È par une fonc-tion $\OML/lmm/m/it/12 f\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 t\OT1/
+lmr/m/n/12 )$ \T1/lmr/m/n/12 consiste ‡ construire,
+ []
 
-] [12] [13]
+[12] <FigEx2_2N256.png, id=70, 612.2875pt x 461.725pt>
+File: FigEx2_2N256.png Graphic file (type png)
+ <use FigEx2_2N256.png>
+Package pdftex.def Info: FigEx2_2N256.png used on input line 312.
+(pdftex.def)             Requested size: 306.143pt x 230.86194pt.
+
+
+./TP2_ballet_laurent.tex:313: LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.313 \caption
+              {\textit{Repr\'esentation pour N=256}}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./TP2_ballet_laurent.tex:313: Undefined control sequence.
+\caption ... \endcsname \fi \fi \@dblarg {\@tempf 
+                                                  \@captype }
+l.313 \caption
+              {\textit{Repr\'esentation pour N=256}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./TP2_ballet_laurent.tex:313: Undefined control sequence.
+\caption ...e \fi \fi \@dblarg {\@tempf \@captype 
+                                                  }
+l.313 \caption
+              {\textit{Repr\'esentation pour N=256}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<FigEx2_2FFT.png, id=71, 612.2875pt x 461.725pt>
+File: FigEx2_2FFT.png Graphic file (type png)
+ <use FigEx2_2FFT.png>
+Package pdftex.def Info: FigEx2_2FFT.png used on input line 328.
+(pdftex.def)             Requested size: 306.143pt x 230.86194pt.
+
+
+./TP2_ballet_laurent.tex:329: LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.329 \caption
+              {\textit{FFT pour N=256}}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./TP2_ballet_laurent.tex:329: Undefined control sequence.
+\caption ... \endcsname \fi \fi \@dblarg {\@tempf 
+                                                  \@captype }
+l.329 \caption
+              {\textit{FFT pour N=256}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./TP2_ballet_laurent.tex:329: Undefined control sequence.
+\caption ...e \fi \fi \@dblarg {\@tempf \@captype 
+                                                  }
+l.329 \caption
+              {\textit{FFT pour N=256}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[13 <./FigEx2_2N256.png>] <FigEx2_2iFFT.png, id=77, 612.2875pt x 461.725pt>
+File: FigEx2_2iFFT.png Graphic file (type png)
+
+<use FigEx2_2iFFT.png>
+Package pdftex.def Info: FigEx2_2iFFT.png used on input line 343.
+(pdftex.def)             Requested size: 306.143pt x 230.86194pt.
+
+
+./TP2_ballet_laurent.tex:344: LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.344 \caption
+              {\textit{iFFT pour N=256}}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./TP2_ballet_laurent.tex:344: Undefined control sequence.
+\caption ... \endcsname \fi \fi \@dblarg {\@tempf 
+                                                  \@captype }
+l.344 \caption
+              {\textit{iFFT pour N=256}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./TP2_ballet_laurent.tex:344: Undefined control sequence.
+\caption ...e \fi \fi \@dblarg {\@tempf \@captype 
+                                                  }
+l.344 \caption
+              {\textit{iFFT pour N=256}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[14 <./FigEx2_2FFT.png> <./FigEx2_2iFFT.png>]
 Chapitre 4.
-[14
 
-]
-Chapitre 5.
+Underfull \hbox (badness 10000) in paragraph at lines 381--382
+
+ []
+
 [15
+
+] <FigEx2_3N256.png, id=86, 612.2875pt x 461.725pt>
+File: FigEx2_3N256.png Graphic file (type png)
+ <use FigEx2_3N256.png>
+Package pdftex.def Info: FigEx2_3N256.png used on input line 429.
+(pdftex.def)             Requested size: 489.83067pt x 369.38051pt.
+
+Overfull \hbox (6.1338pt too wide) in paragraph at lines 429--429
+ [] 
+ []
+
+
+./TP2_ballet_laurent.tex:430: LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.430 \caption
+              {\textit{Coefficients via DFT, FFT et Exactes pour N = 256}}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./TP2_ballet_laurent.tex:430: Undefined control sequence.
+\caption ... \endcsname \fi \fi \@dblarg {\@tempf 
+                                                  \@captype }
+l.430 \caption
+              {\textit{Coefficients via DFT, FFT et Exactes pour N = 256}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./TP2_ballet_laurent.tex:430: Undefined control sequence.
+\caption ...e \fi \fi \@dblarg {\@tempf \@captype 
+                                                  }
+l.430 \caption
+              {\textit{Coefficients via DFT, FFT et Exactes pour N = 256}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[16] <FigEx2_3N64.png, id=90, 612.2875pt x 461.725pt>
+File: FigEx2_3N64.png Graphic file (type png)
+ <use FigEx2_3N64.png>
+Package pdftex.def Info: FigEx2_3N64.png used on input line 436.
+(pdftex.def)             Requested size: 489.83067pt x 369.38051pt.
+
+Overfull \hbox (6.1338pt too wide) in paragraph at lines 436--436
+ [] 
+ []
+
+
+./TP2_ballet_laurent.tex:437: LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.437 \caption
+              {\textit{Coefficients via DFT, FFT et Exactes pour N = 64}}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./TP2_ballet_laurent.tex:437: Undefined control sequence.
+\caption ... \endcsname \fi \fi \@dblarg {\@tempf 
+                                                  \@captype }
+l.437 \caption
+              {\textit{Coefficients via DFT, FFT et Exactes pour N = 64}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./TP2_ballet_laurent.tex:437: Undefined control sequence.
+\caption ...e \fi \fi \@dblarg {\@tempf \@captype 
+                                                  }
+l.437 \caption
+              {\textit{Coefficients via DFT, FFT et Exactes pour N = 64}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[17 <./FigEx2_3N256.png>]
+./TP2_ballet_laurent.tex:450: Missing $ inserted.
+<inserted text> 
+                $
+l.450 On commence avec un signal s(t) = sin(2π
+                                              30t).
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./TP2_ballet_laurent.tex:451: Missing $ inserted.
+<inserted text> 
+                $
+l.451 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[18 <./FigEx2_3N64.png>] <FigEx2_4S30.png, id=99, 612.2875pt x 461.725pt>
+File: FigEx2_4S30.png Graphic file (type png)
+
+<use FigEx2_4S30.png>
+Package pdftex.def Info: FigEx2_4S30.png used on input line 472.
+(pdftex.def)             Requested size: 367.37534pt x 277.03714pt.
+
+
+./TP2_ballet_laurent.tex:473: LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.473 \caption
+              {\textit{Signal échantilloné à 750Hz}}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./TP2_ballet_laurent.tex:473: Undefined control sequence.
+\caption ... \endcsname \fi \fi \@dblarg {\@tempf 
+                                                  \@captype }
+l.473 \caption
+              {\textit{Signal échantilloné à 750Hz}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./TP2_ballet_laurent.tex:473: Undefined control sequence.
+\caption ...e \fi \fi \@dblarg {\@tempf \@captype 
+                                                  }
+l.473 \caption
+              {\textit{Signal échantilloné à 750Hz}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<FigEx2_4F750.png, id=100, 612.2875pt x 461.725pt>
+File: FigEx2_4F750.png Graphic file (type png)
+ <use FigEx2_4F750.png>
+Package pdftex.def Info: FigEx2_4F750.png used on input line 481.
+(pdftex.def)             Requested size: 367.37534pt x 277.03714pt.
+
+
+./TP2_ballet_laurent.tex:482: LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.482 \caption
+              {\textit{Signal échantilloné à 750Hz}}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./TP2_ballet_laurent.tex:482: Undefined control sequence.
+\caption ... \endcsname \fi \fi \@dblarg {\@tempf 
+                                                  \@captype }
+l.482 \caption
+              {\textit{Signal échantilloné à 750Hz}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./TP2_ballet_laurent.tex:482: Undefined control sequence.
+\caption ...e \fi \fi \@dblarg {\@tempf \@captype 
+                                                  }
+l.482 \caption
+              {\textit{Signal échantilloné à 750Hz}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[19 <./FigEx2_4S30.png>] <FigEx2_4F500.png, id=106, 612.2875pt x 461.725pt>
+File: FigEx2_4F500.png Graphic file (type png)
+
+<use FigEx2_4F500.png>
+Package pdftex.def Info: FigEx2_4F500.png used on input line 488.
+(pdftex.def)             Requested size: 367.37534pt x 277.03714pt.
+
+
+./TP2_ballet_laurent.tex:489: LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.489 \caption
+              {\textit{Signal échantilloné à 500Hz}}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./TP2_ballet_laurent.tex:489: Undefined control sequence.
+\caption ... \endcsname \fi \fi \@dblarg {\@tempf 
+                                                  \@captype }
+l.489 \caption
+              {\textit{Signal échantilloné à 500Hz}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./TP2_ballet_laurent.tex:489: Undefined control sequence.
+\caption ...e \fi \fi \@dblarg {\@tempf \@captype 
+                                                  }
+l.489 \caption
+              {\textit{Signal échantilloné à 500Hz}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[20 <./FigEx2_4F750.png> <./FigEx2_4F500.png>] [21]
+Chapitre 5.
+[22
 
 ]
 Chapitre 6.
-[16
+[23
+
+]
+Chapitre 7.
+[24
 
 ] (./TP2_ballet_laurent.lof)
 \tf@lof=\write5
 \openout5 = `TP2_ballet_laurent.lof'.
 
- [17
+ [25
 
 ] (./TP2_ballet_laurent.aux) ) 
 Here is how much of TeX's memory you used:
- 18820 strings out of 493089
- 341916 string characters out of 6134841
- 536232 words of memory out of 5000000
- 21911 multiletter control sequences out of 15000+600000
+ 18878 strings out of 493089
+ 342865 string characters out of 6134841
+ 520231 words of memory out of 5000000
+ 21961 multiletter control sequences out of 15000+600000
  58911 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,14n,72p,464b,2466s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1082,10 +1447,10 @@ ri12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><
 texlive/2015/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/201
 5/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2015/texmf-di
 st/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TP2_ballet_laurent.pdf (17 pages, 386226 bytes).
+Output written on TP2_ballet_laurent.pdf (25 pages, 464701 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
+ 186 PDF objects out of 1000 (max. 8388607)
+ 118 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
 
