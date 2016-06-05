@@ -250,31 +250,36 @@ clf
 plot(x,f(x),'xr')
 		\end{lstlisting}\newpage
 
-\begin{center}
+\begin{figure}
+\centering
 \includegraphics[scale=0.5]{FigEx2_2N4.png}\\
 \caption{\textit{Repr\'esentation pour N=4}}
-\end{center}
+\end{figure}
 
-\begin{center}
+\begin{figure}
+\centering
 \includegraphics[scale=0.5]{FigEx2_2N8.png}\\
 \caption{\textit{Repr\'esentation pour N=8}}
-\end{center}
+\end{figure}
 
-\begin{center}
+\begin{figure}
+\centering
 \includegraphics[scale=0.5]{FigEx2_2N32.png}\\
 \caption{\textit{Repr\'esentation pour N=32}}
-\end{center}\newpage
+\end{figure}\newpage
 
 L'\'echantillonnage consiste à transmettre un signal en capturant des valeurs à périodes régulières. Ce dernier produit une suite de valeurs discrètes.
 
 La première étape de de ce processus est l'\'echantillonnage du signal :\\
-L\'échantillonnage d\'un signal $f(t)$ analogique représenté par une fonction $f(t)$ consiste à construire, à partir de $f(t)$, un signal à temps discret obtenu en mesurant la valeur de $f(t)$ toutes les $t_{k}$ secondes tel que : $y_{k} = f (t_{k})$ , avec $k = 0..., N ? 1$ et $N$ le nombre d’échantillons de $f(t)$. 
+L'\'echantillonnage d'un signal $f(t)$ analogique représenté par une fonction $f(t)$ consiste à construire, à partir de $f(t)$, un signal à temps discret obtenu en mesurant la valeur de $f(t)$ toutes les $t_{k}$ secondes tel que : $y_{k} = f (t_{k})$ , avec $k = 0..., N-1$ et $N$ le nombre d’échantillons de $f(t)$. 
 On pose $t_{k} = \frac{ka}{N}$
 
 La seconde étape est la determination de la fréquence:\\
-La cadence à laquelle les valeurs sont capturées est la fréquence d? échantillonnage (taux d'échantillonnage). L' objectif de l'échantillonnage est la transmission de l'information codée dans un signal. La question du choix de la fréquence d'échantillonnage se pose immédiatement :\\Si la fréquence d'échantillonnage est trop faible, les acquisitions seront trop espacées et si le signal comporte des détails pertinents entre deux positions de capture, ceux-ci seront perdus ;
-Plus la fréquence d'échantillonnage est élevée, et plus la transmission coûte en puissance de traitement, en capacités de transmission et en espace de stockage.Il faut donc bien choisir sa fréquence $F_{e}$ d'échantillonnage. 
-Soit $F_{e}$ la fréquence d'échantillonnage il faut donc que le signal soit échantillonné uniformément avec un intervalle de temps égal à $\frac{a}{N}$
+La cadence à laquelle les valeurs sont capturées est la fréquence d' \'echantillonnage (taux d'échantillonnage). L' objectif de l'échantillonnage est la transmission de l'information codée dans un signal. La question du choix de la fréquence d'échantillonnage se pose immédiatement :\\
+Si la fréquence d'échantillonnage est trop faible, les acquisitions seront trop espacées et si le signal comporte des détails pertinents entre deux positions de capture, ceux-ci seront perdus ;
+Plus la fréquence d'échantillonnage est élevée, et plus la transmission coûte en puissance de traitement, en capacités de transmission et en espace de stockage.
+Il faut donc bien choisir sa fréquence $F_{e}$ d'échantillonnage. 
+Soit $F_{e}$ la fréquence d'échantillonnage il faut donc que le signal soit échantillonné uniformément avec un intervalle de temps égal à $\frac{a}{N}$.
 
 	\section{Signal d'origine}
 Suite à la modélisation de la fonction ci dessus. on peut utiliser la FFT et son inverse IFFT afin de trouver le signal d'origine.
@@ -306,10 +311,11 @@ clf
 plot(x,f(x),'xr')
 \end{lstlisting}
 
-\begin{center}
+\begin{figure}
+\centering
 \includegraphics[scale=0.5]{FigEx2_2N256.png}\\
 \caption{\textit{Repr\'esentation pour N=256}}
-\end{center}
+\end{figure}
 
 On applique ensuite la transformée de Fourier sur la fonction
 \begin{lstlisting}
@@ -322,10 +328,11 @@ plot(x,F)
 
 On obtient alors le spectre du signal :
 
-\begin{center}
+\begin{figure}
+\centering
 \includegraphics[scale=0.5]{FigEx2_2FFT.png}\\
 \caption{\textit{FFT pour N=256}}
-\end{center}
+\end{figure}
 
 Puis la transformée de la fonction inverse
 \begin{lstlisting}
@@ -337,10 +344,11 @@ plot(x,F2)
 \end{lstlisting}
 
 On a le résultat suivant :
-\begin{center}
+\begin{figure}
+\centering
 \includegraphics[scale=0.5]{FigEx2_2iFFT.png}\\
 \caption{\textit{iFFT pour N=256}}
-\end{center}
+\end{figure}
 
 On remarque que l'on obtient à nouveau la fonction créneau de départ.
 
@@ -400,7 +408,14 @@ temps2  =
 Ainsi pour N=256, on montre que la FFT est $10^{4}$ fois plus rapide que la DFT. Ceci est du à la complexité des algorithmes. Pour la DFT on est en $O(n^{2})$ alors que pour la FFT on est en $O(n*log(n))$. Il nous reste maintenant à comparer les résultats de coefficients.
 
 \begin{lstlisting}
-//Calcul des coefficients Cpsol1(1)=1/3sol2(N)=sol1(1)for p=2:N    sol1(p)=sin(p*1/3*%pi)/(p*%pi)    sol2((N+1)-p)=sol1(p)    endRes=[sol2' sol1’]
+//Calcul des coefficients Cp
+sol1(1)=1/3
+sol2(N)=sol1(1)
+for p=2:N
+    sol1(p)=sin(p*1/3*%pi)/(p*%pi)
+    sol2((N+1)-p)=sol1(p)
+    end
+Res=[sol2' sol1’]
 \end{lstlisting}
 
 Cependant les coefficients réels de la série de Fourier ont des valeurs sur $\mathbb{Z}$. Et dans notre cas, nous n'avons que des valeurs pour $n \in \mathbb{N}$. Ainsi on corrige en utilisant la propriété que : 
@@ -416,17 +431,19 @@ Cependant les coefficients réels de la série de Fourier ont des valeurs sur $\ma
   On calcule donc $C_{n}$ sur $\mathbb{Z}$ en séparant les négatifs dans un vecteur et les positifs dans un autre.
 On obtient alors le résultat suivant :
 
-\begin{center}
+\begin{figure}
+\centering
 \includegraphics[scale=0.8]{FigEx2_3N256.png}\\
 \caption{\textit{Coefficients via DFT, FFT et Exactes pour N = 256}}
-\end{center}
+\end{figure}
 
 Les figures ci dessus montrent beaucoup de similarité. En effet pour $N$ grand, on a des résultats correctes. Cependant lorsque $N$ est inférieur à 128, les résultats sont médiocres. Comme le montre les graphiques ci dessous :
 
-\begin{center}
+\begin{figure}
+\centering
 \includegraphics[scale=0.8]{FigEx2_3N64.png}\\
 \caption{\textit{Coefficients via DFT, FFT et Exactes pour N = 64}}
-\end{center}
+\end{figure}
 
 
 
@@ -435,7 +452,10 @@ Les figures ci dessus montrent beaucoup de similarité. En effet pour $N$ grand, 
 
 	%Question 2.4
 	\section{R\'esolution fr\'equentielle de signaux}
-	Nous étudions un signal $s$ reçu sur un intervalle de temps $[0; 0, 1]$et échantillonné de manière discrète avec une fréquence $F_{e} = 1000Hz$. Nous avons alors un pasd’échantillonnage $T_{e} =\frac{1}{F_{e}}$ et un nombre d’échantillons $N = F_{e}T_{e}$On commence avec un signal s(t) = sin(2π30t). 
+	Nous étudions un signal $s$ reçu sur un intervalle de temps $[0; 0, 1]$
+et échantillonné de manière discrète avec une fréquence $F_{e} = 1000Hz$. Nous avons alors un pas
+d’échantillonnage $T_{e} =\frac{1}{F_{e}}$ et un nombre d’échantillons $N = F_{e}T_{e}$
+On commence avec un signal $s(t) = sin(2\pi30t)$. 
 
 \begin{lstlisting}
 clf
@@ -456,32 +476,40 @@ plot(f,abs(y(1:n)))
 	
 On commence par l'échantillonner en temps. Puis on trace sa FFT. Ce qui donne :
 
-\begin{center}
+\begin{figure}
+\centering
 \includegraphics[scale=0.6]{FigEx2_4S30.png}\\
 \caption{\textit{Signal échantilloné à 750Hz}}
-\end{center}	
+\end{figure}	
 
 	
 On obtient le pic attendu de fréquence $30Hz$. Si l'on modifie $30$ par $k, k \in \mathbb{N}$ on retrouvera un pic de fréquence $k$.
 Maintenant, nous allons faire varier la fréquence d’échantillonnage. Pour cela, on s’intéresse à une fonction $f(t) = sin(2\pi312t)$. On démarre l’échantillonnage avec une fréquence $F_{e} = 750Hz$. On obtient la figure suivante :
 
-\begin{center}
+\begin{figure}
+\centering
 \includegraphics[scale=0.6]{FigEx2_4F750.png}\\
 \caption{\textit{Signal échantilloné à 750Hz}}
-\end{center}	
+\end{figure}	
 
 Comme prévu. On obtient un pic à 312Hz. De plus, pour des fréquences de 650Hz et plus, on obtient les mêmes figures. Cependant, à partir de 600Hz et moins, le pic de fréquence de fréquence est décalé :
 
-\begin{center}
+\begin{figure}
+\centering
 \includegraphics[scale=0.6]{FigEx2_4F500.png}\\
 \caption{\textit{Signal échantilloné à 500Hz}}
-\end{center}	
+\end{figure}	
 
 Ici, le pic de fréquence est décalé à 190Hz alors que le signal initial possède un pic à 312Hz. Ainsi tant que la fréquence est deux fois supérieure à 312Hz (624Hz), le signal est correctement reconstitué. En revanche, dès que la fréquence est inférieure, le signal est décalé. Cela illustre le théorème de Shannon.
 
-Théorème d’échantillonnage de Shannon :La fréquence d'échantillonnage doit être supérieure à deux fois la fréquence la plus élevée d'un signal à spectre limité.$$F_{e} > 2 f_{max}$$Dans le cas contraire, il y a perte d? informations et déformation du signal reconstitué.C'est pourquoi, tant que la Fréquence d'échantillonnage $F_{e}$ est supérieure à $2 ? 312 Hz$ (soit deux fois la fréquence), la fréquence est bien construite.
+Théorème d’échantillonnage de Shannon :
+La fréquence d'échantillonnage doit être supérieure à deux fois la fréquence la plus élevée d'un signal à spectre limité.
+$$F_{e} > 2 f_{max}$$
+Dans le cas contraire, il y a perte d? informations et déformation du signal reconstitué.
+C'est pourquoi, tant que la Fréquence d'échantillonnage $F_{e}$ est supérieure à $2 * 312 Hz$ (soit deux fois la fréquence), la fréquence est bien construite.
 
-Théorème de Poisson :Soit f une fonction régulière à décroissance rapide vers l’infini, $\forall n$ :
+Théorème de Poisson :
+Soit f une fonction régulière à décroissance rapide vers l’infini, $\forall n$ :
 $$\parallel f(x)\parallel \leq \frac{c}{(a+x^{2})^{n}}, \parallel x \parallel \rightarrow \infty $$ 
 On a :
 $$\sum_{n\in \mathbb{Z}} f(x+na) = \frac{1}{a}\sum_{n\in \mathbb{Z}} \widehat{f}(\frac{x}{a})exp(2i\pi n\frac{x}{a})$$
@@ -500,6 +528,38 @@ Soit l'opération de convolution discrète de f(t) par h(t) par le filtre à répons
 $$y(t) = \sum_{k = -\infty}^{\infty}f(x)h(t-x)$$
 qu'on peut écrire sous la forme suivante grâce à la commutativité :
 $$y(t) = \sum_{k = -\infty}^{\infty}f(t-x)h(x)$$
+\begin{definition}
+Le produit de convolution $x*y$ de deux suites $x = (x_{n})$ et $y = (y_{n})$ p\'eriodiques de p\'eriode $N$ est la suite $N$-p\'eriodique $x*y$ d\'efinie par
+$$(x*y)(n) = \sum_{k=0}^{N-1} x(n-k)y(k)\quad n=0,1,...,N-1$$\\
+Elle est appel\'ee \textit{convolution circulaire}.
+\end{definition}
+
+Nous nous interessons \`a pr\'esent \`a la relation entre $DFT$ et convolution. Nous pouvons montrer que :
+$$DFT(x*y) = DFT(x).DFT(y)$$
+
+En effet :\\
+Soit $h$ la convolution circulaire de $x$ et $v$ :
+$$h(n) = \sum_{k=0}^{N-1} x(n-k)y(k)\quad n=0,1,...,N-1$$
+
+D'o\`u,
+
+\begin{eqnarray*}
+		DFT(h)(t)&=&\sum_{n=0}^{N-1} h(n)e^{-2i\pi t\frac{n}{N}}\\
+			     &=&\sum_{n=0}^{N-1} (\sum_{k=0}^{N-1} x(n-k)y(k))e^{-2i\pi t\frac{n}{N}}\\
+\end{eqnarray*}
+Or,
+$$|x(n-k)y(k)e^{-2i\pi t\frac{n}{N}}|=|x(n-k)y(k)|$$ d'o\`u
+
+\begin{eqnarray*}
+		DFT(h)(t)&=&\sum_{k=0}^{N-1} y(k)(\sum_{n=0}^{N-1} x(n-k)e^{-2i\pi t\frac{n}{N}})\\
+\end{eqnarray*}
+On pose $\theta=n-k$
+\begin{eqnarray*}
+		DFT(h)(t)&=&\sum_{k=0}^{N-1} y(k)(\sum_{\theta=0}^{N-1} x(\theta)e^{-2i\pi t\frac{\theta+k}{N}})\\
+				 &=&\sum_{k=0}^{N-1} y(k)e^{-2i\pi t\frac{k}{N}}(\sum_{\theta=0}^{N-1} x(\theta)e^{-2i\pi t\frac{\theta}{N}})\\
+				 &=&DFT(y).DFT(x)\\
+\end{eqnarray*}
+
 Démonstration de la relation propre à la convolution discrète $DFT(f \mathord g) = N . DFT(f) . DFT(g)$
 
 Preuve :

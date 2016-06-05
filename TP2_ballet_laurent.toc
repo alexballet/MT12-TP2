@@ -8,7 +8,7 @@
 \contentsline {section}{\numberline {3.2}Signal d'origine}{12}
 \contentsline {chapter}{\numberline {4}Applications de la DFT}{15}
 \contentsline {section}{\numberline {4.1}Efficacit\'e de la FFT et Approximation des coefficients de Fourier}{15}
-\contentsline {section}{\numberline {4.2}R\'esolution fr\'equentielle de signaux}{18}
+\contentsline {section}{\numberline {4.2}R\'esolution fr\'equentielle de signaux}{19}
 \contentsline {chapter}{\numberline {5}DFT et convolution}{22}
-\contentsline {chapter}{\numberline {6}Ph\'enom\`ene de Gibbs}{23}
-\contentsline {chapter}{\numberline {7}Effet du fen\^etrage}{24}
+\contentsline {chapter}{\numberline {6}Ph\'enom\`ene de Gibbs}{24}
+\contentsline {chapter}{\numberline {7}Effet du fen\^etrage}{25}
