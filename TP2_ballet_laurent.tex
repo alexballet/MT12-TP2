@@ -510,7 +510,11 @@ Ainsi $F_{e} \geq 2v_{c}$\\
 La fréquence d'échantillonnage doit être supérieure à deux fois la fréquence la plus élevée d'un signal à spectre limité.
 $$F_{e} > 2 f_{max}$$
 Dans le cas contraire, il y a perte d'informations et déformation du signal reconstitué.
+<<<<<<< HEAD
 C'est pourquoi, tant que la Fréquence d'échantillonnage $F_{e}$ est supérieure à $2 * 312 Hz$ (soit deux fois la fréquence), la fréquence est bien construite.
+=======
+C'est pourquoi, tant que la fréquence d'échantillonnage $F_{e}$ est supérieure à $2 * 312 Hz$ (soit deux fois la fréquence), la fréquence est bien construite.
+>>>>>>> 6add62736188bd0252420620fccd49f44fd2be89
 
 Théorème de Poisson :
 Soit f une fonction régulière à décroissance rapide vers l’infini, $\forall n$ :
@@ -578,8 +582,16 @@ On injecte l'expression de $g(x)=\sum_{n \in \mathbb{Z}}f(x+na)$ dans l'expressi
 			 &=&\frac{1}{a}\sum_{n \in \mathbb{Z}}\int_{0}^{a}f(x+na)e^{\frac{-2i\pi kx}{a}}dx\\
 \end{eqnarray*}
 On pose $X=x+na$, $dX=dx$ et on a les bornes $\left\{\begin{array}{llll} x &~=~& a & X=(1+n)a\\x &~=~& 0 & X=na\end{array}\right.$
-$$c_{k}=\frac{1}{a}\sum_{n \in \mathbb{Z}}\int_{na}{(n+1)a}f(X)e^{\frac{-2i\pi k(X-na)}{a}}dX$$
-$$c_{k}=\frac{1}{a}\sum_{n \in \mathbb{Z}}\int_{na}{(n+1)a}f(X)e^{\frac{-2i\pi kX}{a}}dX$$
+$$c_{k}=\frac{1}{a}\sum_{n \in \mathbb{Z}}\int_{na}^{(n+1)a}f(X)e^{\frac{-2i\pi k(X-na)}{a}}dX$$
+$$c_{k}=\frac{1}{a}\sum_{n \in \mathbb{Z}}\int_{na}^{(n+1)a}f(X)e^{\frac{-2i\pi kX}{a}}dX$$
+On sait que $f$ est int\'egrable
+$$\sum\int_{na}^{(n+1)a}f(x)=\int_{\mathbb{R}}h(x)\text{ d'apr\`es Chasles car }\mathbb{R} = U_{n \in \mathbb{Z}}(na, (n+1)a)$$
+Donc
+$$_{k}=\frac{1}{a}\int_{\mathbb{R}}f(x)e^{\frac{-2i\pi kx}{a}}dx=\frac{1}{a}\widehat{f}(\frac{k}{a})$$
+Ainsi
+$$g(x)=S_{g}(x)=\sum c_{k}e^{\frac{2i\pi kx}{a}}=\sum_{k}\frac{1}{a}\widehat{f}(\frac{k}{a})e^{\frac{2i\pi kx}{a}}$$
+On a bien
+$$\sum_{n \in \mathbb{Z}}f(x+na)=\sum_{k}\frac{1}{a}\widehat{f}(\frac{k}{a})e^{\frac{2i\pi kx}{a}}$$
 
 %Question 2.5
 \chapter{DFT et convolution}
@@ -595,27 +607,24 @@ Elle est appel\'ee \textit{convolution circulaire}.
 \end{definition}
 
 Nous nous interessons \`a pr\'esent \`a la relation entre $DFT$ et convolution. Nous pouvons montrer que :
-$$DFT(x*y) = DFT(x).DFT(y)$$
+$$DFT(x*y) = N.DFT(x).DFT(y)$$
 
 Démonstration de la relation propre à la convolution discrète $DFT(f \mathord g) = N . DFT(f) . DFT(g)$\\
 En effet :\\
-Soit $h$ la convolution circulaire de $x$ et $v$ :
+Soit $h$ la convolution circulaire de $x$ et $y$ :
 $$h(n) = \sum_{k=0}^{N-1} x(n-k)y(k)\quad n=0,1,...,N-1$$
 
 D'o\`u,
 
 \begin{eqnarray*}
-		DFT(h)(t)&=&\sum_{n=0}^{N-1} h(n)e^{-2i\pi t\frac{n}{N}}\\
-			     &=&\sum_{n=0}^{N-1} (\sum_{k=0}^{N-1} x(n-k)y(k))e^{-2i\pi t\frac{n}{N}}\\
+		DFT(h)(t)&=&\frac{1}{N}\sum_{n=0}^{N-1}\omega^{-tn}h(n)\\
+			     &=&\frac{1}{N}\sum_{n=0}^{N-1}\omega^{-tn}(\sum_{k=0}^{N-1} x(n-k)y(k))\\
+			     &=&\frac{1}{N}\sum_{n=0}^{N-1}\sum_{k=0}^{N-1}\omega^{-t(n-k)}x(n-k)\omega^{-tk}y(k)\\
+			     &=&\frac{1}{N}\sum_{n=0}^{N-1}\omega^{-tk}y(k)(\sum_{k=0}^{N-1}\omega^{-t(n-k)}x(n-k))\\
 \end{eqnarray*}
-Or,
-$$|x(n-k)y(k)e^{-2i\pi t\frac{n}{N}}|=|x(n-k)y(k)|$$ d'o\`u
-
+On pose $m=n-k$ :
 \begin{eqnarray*}
-		DFT(h)(t)&=&\sum_{k=0}^{N-1} y(k)(\sum_{n=0}^{N-1} x(n-k)e^{-2i\pi t\frac{n}{N}})\\
-\end{eqnarray*}
-On pose $\theta=n-k$
-\begin{eqnarray*}
+<<<<<<< HEAD
 		DFT(h)(t)&=&\sum_{k=0}^{N-1} y(k)(\sum_{\theta=0}^{N-1} x(\theta)e^{-2i\pi t\frac{\theta+k}{N}})\\
 				 &=&\sum_{k=0}^{N-1} y(k)e^{-2i\pi t\frac{k}{N}}(\sum_{\theta=0}^{N-1} x(\theta)e^{-2i\pi t\frac{\theta}{N}})\\
 				 &=&DFT(y).DFT(x)\\
@@ -690,6 +699,13 @@ plot(fftshift(K))
 
 Les résultats obtenus sont identiques, ce qui justifie bien la propriété énoncée. Cependant ce résultat n’est valable que pour un N grand , soit ici N=640. En effet lorsque N est trop petit, le pas d’échantillonnage est trop faible pour avoir une bonne approximation de la fft et donc de la convolution.
 
+=======
+		DFT(h)(t)&=&\frac{1}{N}\sum_{n=0}^{N-1}\omega^{-tk}y(k)(\sum_{m=-k}^{N-1-k}\omega^{-tm}x(m))\\
+			     &=&N(\frac{1}{N}\sum_{n=0}^{N-1}\omega^{-tk}y(k))(\frac{1}{N}\sum_{m=0}^{N-1}\omega^{-tm}x(m))\\
+			     &=&N.DFT(x).DFT(y)\\
+\end{eqnarray*}
+
+>>>>>>> 6add62736188bd0252420620fccd49f44fd2be89
 
 %Question 2.6
 \chapter{Ph\'enom\`ene de Gibbs}
