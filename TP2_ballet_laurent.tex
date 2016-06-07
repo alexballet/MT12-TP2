@@ -519,6 +519,7 @@ Soit f une fonction régulière à décroissance rapide vers l’infini, $\forall n$ :
 $$\parallel f(x)\parallel \leq \frac{c}{(a+x^{2})^{n}}, \parallel x \parallel \rightarrow \infty $$ 
 On a :
 $$\sum_{n\in \mathbb{Z}} f(x+na) = \frac{1}{a}\sum_{n\in \mathbb{Z}} \widehat{f}(\frac{x}{a})exp(2i\pi n\frac{x}{a})$$
+
 Démonstration du théorème de Shannon :\\
 Pour montrer le th\'eor\`eme, il suffit de comparer $\widehat{f}$ et $\widehat{\Phi}$ o\`u
 $$\Phi(x)=\sum f(nT_{e})\frac{sin(\frac{\pi(x-nT_{e})}{T_{e}})}{\frac{\pi(x-nT_{e})}{T_{e}}}$$
@@ -565,10 +566,22 @@ Donc
 $$\widehat{\Phi}(\xi)=\widehat{f}(\xi)\text{  , }\forall\xi \in \mathbb{R}$$
 La condition $0\leq T_{e} \leq \frac{1}{2v_{c}}$ s'appelle condition de Shannon-Nyquist.
 
-Démonstration du théorème de Poisson :
-
-
-
+Démonstration du théorème de Poisson :\\
+Soit $g(x) = \sum_{n \in \mathbb{Z}}f(x+na)$\\
+La fonction est $a$-p\'eriodique, en effet\\
+$g(x+a)=\sum_{n \in \mathbb{Z}}f(x+a+na)=\sum_{n \in \mathbb{Z}}f(x+(1+n)a)=\sum f(x+na)=g(x)$\\
+De plus, g satisfait les conditions de Dirichlet donc :
+$$g(x)=S_{g}(x)=\sum c_{k}e^{\frac{2i\pi kx}{a}}$$
+O\`u
+$$c_{k}=\frac{1}{a}\int_{0}^{a}g(x)e^{\frac{-2i\pi kx}{a}}dx$$
+On injecte l'expression de $g(x)=\sum_{n \in \mathbb{Z}}f(x+na)$ dans l'expression de $c_{k}$ pour avoir :
+\begin{eqnarray*}
+		c_{k}&=&\frac{1}{a}\int_{0}^{a}(\sum_{n \in \mathbb{Z}}f(x+na))e^{\frac{-2i\pi kx}{a}}dx\\
+			 &=&\frac{1}{a}\sum_{n \in \mathbb{Z}}\int_{0}^{a}f(x+na)e^{\frac{-2i\pi kx}{a}}dx\\
+\end{eqnarray*}
+On pose $X=x+na$, $dX=dx$ et on a les bornes $\left\{\begin{array}{llll} x &~=~& a & X=(1+n)a\\x &~=~& 0 & X=na\end{array}\right.$
+$$c_{k}=\frac{1}{a}\sum_{n \in \mathbb{Z}}\int_{na}{(n+1)a}f(X)e^{\frac{-2i\pi k(X-na)}{a}}dX$$
+$$c_{k}=\frac{1}{a}\sum_{n \in \mathbb{Z}}\int_{na}{(n+1)a}f(X)e^{\frac{-2i\pi kX}{a}}dX$$
 
 %Question 2.5
 \chapter{DFT et convolution}
