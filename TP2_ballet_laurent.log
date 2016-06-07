@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.21)  7 JUN 2016 13:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.21)  7 JUN 2016 14:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1013,15 +1013,7 @@ Package pdftex.def Info: FigEx2_4F500.png used on input line 499.
 Chapitre 5.
 [25
 
-]
-Overfull \hbox (9.90771pt too wide) in paragraph at lines 625--626
-[]\T1/lmr/m/n/12 Démonstration de la re-la-tion propre à la convo-lu-tion dis-c
-rète $\OML/lmm/m/it/12 DFT\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 fg\OT1/lmr/m/n/12 )
- = \OML/lmm/m/it/12 N:DFT\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 f\OT1/lmr/m/n/12 )\O
-ML/lmm/m/it/12 :DFT\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 g\OT1/lmr/m/n/12 )$ 
- []
-
-[26]
+] [26]
 Chapitre 6.
 [27
 
@@ -1037,10 +1029,10 @@ Chapitre 7.
 
 ] (./TP2_ballet_laurent.aux) ) 
 Here is how much of TeX's memory you used:
- 18881 strings out of 493089
- 342907 string characters out of 6134841
+ 18879 strings out of 493089
+ 342884 string characters out of 6134841
  520232 words of memory out of 5000000
- 21963 multiletter control sequences out of 15000+600000
+ 21961 multiletter control sequences out of 15000+600000
  61706 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,14n,72p,464b,2466s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1064,7 +1056,7 @@ l/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2
 015/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2015/texmf-d
 ist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2015/texmf-dist/fonts/
 type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TP2_ballet_laurent.pdf (29 pages, 502534 bytes).
+Output written on TP2_ballet_laurent.pdf (29 pages, 502785 bytes).
 PDF statistics:
  202 PDF objects out of 1000 (max. 8388607)
  129 compressed objects within 2 object streams
