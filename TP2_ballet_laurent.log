@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.21)  5 JUN 2016 11:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.21)  7 JUN 2016 11:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1009,37 +1009,38 @@ File: FigEx2_4F500.png Graphic file (type png)
 Package pdftex.def Info: FigEx2_4F500.png used on input line 499.
 (pdftex.def)             Requested size: 367.37534pt x 277.03714pt.
  [20 <./FigEx2_4F750.png>] [21 <./FigEx2_4F500.png>]
+[22] [23]
 Chapitre 5.
-[22
+[24
 
 ]
-Overfull \hbox (9.90771pt too wide) in paragraph at lines 563--564
+Overfull \hbox (9.90771pt too wide) in paragraph at lines 612--613
 []\T1/lmr/m/n/12 Démonstration de la re-la-tion propre à la convo-lu-tion dis-c
 rète $\OML/lmm/m/it/12 DFT\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 fg\OT1/lmr/m/n/12 )
  = \OML/lmm/m/it/12 N:DFT\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 f\OT1/lmr/m/n/12 )\O
 ML/lmm/m/it/12 :DFT\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 g\OT1/lmr/m/n/12 )$ 
  []
 
-[23]
+[25]
 Chapitre 6.
-[24
+[26
 
 ]
 Chapitre 7.
-[25
+[27
 
 ] (./TP2_ballet_laurent.lof)
 \tf@lof=\write5
 \openout5 = `TP2_ballet_laurent.lof'.
 
- [26
+ [28
 
 ] (./TP2_ballet_laurent.aux) ) 
 Here is how much of TeX's memory you used:
- 18880 strings out of 493089
- 342897 string characters out of 6134841
+ 18881 strings out of 493089
+ 342907 string characters out of 6134841
  520232 words of memory out of 5000000
- 21962 multiletter control sequences out of 15000+600000
+ 21963 multiletter control sequences out of 15000+600000
  61706 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,14n,72p,464b,2466s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1063,10 +1064,10 @@ l/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2
 015/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2015/texmf-d
 ist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2015/texmf-dist/fonts/
 type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TP2_ballet_laurent.pdf (26 pages, 488457 bytes).
+Output written on TP2_ballet_laurent.pdf (28 pages, 499490 bytes).
 PDF statistics:
- 193 PDF objects out of 1000 (max. 8388607)
- 123 compressed objects within 2 object streams
+ 199 PDF objects out of 1000 (max. 8388607)
+ 127 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  73 words of extra memory for PDF output out of 10000 (max. 10000000)
 

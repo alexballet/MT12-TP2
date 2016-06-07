@@ -503,6 +503,12 @@ Comme prévu. On obtient un pic à 312Hz. De plus, pour des fréquences de 650Hz et
 Ici, le pic de fréquence est décalé à 190Hz alors que le signal initial possède un pic à 312Hz. Ainsi tant que la fréquence est deux fois supérieure à 312Hz (624Hz), le signal est correctement reconstitué. En revanche, dès que la fréquence est inférieure, le signal est décalé. Cela illustre le théorème de Shannon.
 
 Théorème d’échantillonnage de Shannon :
+Soit $f$ \`a spectre limit\'e : $\widehat{f}(\xi) = 0$ d\`es que $|\xi| > v_{c}$\\
+Alors $\forall T_{e} \leq \frac{1}{2v_{c}}$
+$$f(x)=\sum f(nT_{e})\frac{sin(\frac{\pi(x-nT_{e})}{T_{e}})}{\frac{\pi(x-nT_{e})}{T_{e}}}$$
+Or
+$$F_{e}=\frac{1}{T_{e}} \text{ donc } \frac{1}{F_{e}} \leq \frac{1}{2v_{c}}$$
+Ainsi $F_{e} \geq 2v_{c}$\\
 La fréquence d'échantillonnage doit être supérieure à deux fois la fréquence la plus élevée d'un signal à spectre limité.
 $$F_{e} > 2 f_{max}$$
 Dans le cas contraire, il y a perte d? informations et déformation du signal reconstitué.
@@ -513,8 +519,51 @@ Soit f une fonction régulière à décroissance rapide vers l’infini, $\forall n$ :
 $$\parallel f(x)\parallel \leq \frac{c}{(a+x^{2})^{n}}, \parallel x \parallel \rightarrow \infty $$ 
 On a :
 $$\sum_{n\in \mathbb{Z}} f(x+na) = \frac{1}{a}\sum_{n\in \mathbb{Z}} \widehat{f}(\frac{x}{a})exp(2i\pi n\frac{x}{a})$$
-Démonstration du théorème de Shannon :
-
+Démonstration du théorème de Shannon :\\
+Pour montrer le th\'eor\`eme, il suffit de comparer $\widehat{f}$ et $\widehat{\Phi}$ o\`u
+$$\Phi(x)=\sum f(nT_{e})\frac{sin(\frac{\pi(x-nT_{e})}{T_{e}})}{\frac{\pi(x-nT_{e})}{T_{e}}}$$
+On a 
+$$\widehat{\Phi}(\xi)=\sum f(nT_{e})\widehat{\frac{sin(\frac{\pi(x-nT_{e})}{T_{e}})}{\frac{\pi(x-nT_{e})}{T_{e}}}}(\xi)$$
+$$\widehat{\Phi}(\xi)=\sum f(nT_{e})\int_{\mathbb{R}}\frac{sin(\frac{\pi(x-nT_{e})}{T_{e}})}{\frac{\pi(x-nT_{e})}{T_{e}}}e^{-2i\pi \xi n}$$
+On pose :
+$$X=\frac{\pi}{T_{e}}(x-nT_{e})$$
+donc $x=\frac{XT_{e}}{\pi} + nT_{e}$\\
+Donc
+$$\widehat{\Phi}(X)=\sum f(nT_{e})\int_{\mathbb{R}}e^{-2i\pi \xi(nT_{e}+\frac{XT_{e}}{\pi})}\frac{sinX}{X}dX\frac{T_{e}}{\pi}$$
+$$\widehat{\Phi}(X)=\frac{T_{e}}{\pi}\sum f(nT_{e})e^{-2i\xi nT_{e}}\int_{\mathbb{R}}e^{\frac{-2i\pi XT_{e}}{\pi}}\frac{sinX}{X}dX$$
+On pose 
+$$s=\frac{X}{\pi} \text{ donc } ds=\frac{dX}{\pi}s$$
+Ainsi
+$$\widehat{\Phi}(X)=T_{e}\sum f(nT_{e})e^{-2i\xi nT_{e}}\int_{\mathbb{R}}e^{-2i\pi sT_{e}}\frac{sin\pi s}{\pi s}ds$$
+On sait que
+$$\widehat{\chi_{[-\alpha,\alpha]}(s)}=\frac{sin\pi\alpha\xi}{\pi\xi}$$
+Or
+$$\widehat{\widehat{\chi_{[-\alpha,\alpha]}(s)}}=\widehat{\frac{sin(2\pi\alpha\xi)}{\pi\xi}}$$
+Si $\alpha=\frac{1}{2}$ :
+$$\widehat{\widehat{\chi_{[-\frac{1}{2},\frac{1}{2}]}(s)}}=\widehat{\frac{sin\pi\xi}{\pi\xi}}$$
+Donc
+$$\chi_{[-\frac{1}{2},\frac{1}{2}]}=\widehat{\frac{sin\pi\xi}{\pi\xi}}$$
+Et
+$$\widehat{\Phi}(\xi)=T_{e}[\sum f(xT_{e})e^{-2i\pi\xi nT_{e}}]\chi_{[-\frac{1}{2},\frac{1}{2}]}(\xi T_{e})$$
+\begin{equation}
+\widehat{\Phi}(\xi)=T_{e}[\sum f(xT_{e})e^{-2i\pi\xi nT_{e}}]\chi_{[-\frac{1}{2T_{e}},\frac{1}{2T_{e}}]}(\xi T_{e})
+\label{shannon1}
+\end{equation}
+En utilisant la formule de Poisson et en remplaÁant $f$ par $\widehat{f}$ on a :
+\begin{eqnarray*}
+		\sum\widehat{f}(x+na)&=&\frac{1}{a}\sum\widehat{f}(\frac{n}{a})e^{\frac{2i\pi nx}{a}}\\
+		\sum\widehat{f}(x+na)&=&\frac{1}{a}\sum f(\frac{-n}{a})e^{\frac{2i\pi nx}{a}}\\
+		\sum\widehat{f}(x+na)&=&\frac{1}{a}\sum f(\frac{n}{a})e^{\frac{-2i\pi nx}{a}}\\
+\end{eqnarray*}
+Si $a=\frac{1}{T_{e}}$ alors on a :
+$$T_{e}\sum f(nT_{e})e^{-2i\pi nxT_{e}}=\sum\widehat{f}(x+\frac{n}{T_{e}})$$
+Donc d'apr\`es \eqref{shannon1} :
+$$\widehat{\Phi}(\xi)=(\sum \widehat{f}(\xi + \frac{n}{T_{e}}))\chi_{[-\frac{1}{2T_{e}},\frac{1}{2T_{e}}]}(\xi T_{e})$$
+On a :
+$$\frac{-1}{2T_{e}}\leq\xi\leq\frac{1}{2T_{e}}$$
+Donc
+$$\widehat{\Phi}(\xi)=\widehat{f}(\xi)\text{  , }\forall\xi \in \mathbb{R}$$
+La condition $0\leq T_{e} \leq \frac{1}{2v_{c}}$ s'appelle condition de Shannon-Nyquist.
 
 Démonstration du théorème de Poisson :
 
