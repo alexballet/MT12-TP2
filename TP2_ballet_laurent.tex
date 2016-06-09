@@ -17,6 +17,7 @@
 \usepackage{amsthm}
 \usepackage{amssymb}
 \usepackage{amsfonts}
+
 %Pour faire un tableau de d\'eriv\'e
 \usepackage{tikz,tkz-tab}
 \usepackage{float}
@@ -82,9 +83,53 @@ Printemps 2016
 %Table des mati\`eres
 \tableofcontents
 
-\chapter{Présentation de la transformée de Fourier et ses applications}
-	
+\chapter{Biographies}
+	\section{Claude Shannon}
 
+	Claude Elwood Shannon (30 avril 1916 \`a Petoskey, Michigan - 24 f\'evrier 2001 \`a Medford, Massachusetts) \'etait  un ing\'enieur et chercheur en g\'enie \'electrique, math\'ematicien et cryptographe am\'ericain. Il est consid\'er\'e comme le "p\`ere de la th\'eorie de l'information", pour avoir publi\'e en 1948 un article phare : "A Mathematical Theory of Communication".\\
+	Shannon a pass\'e ses 16 premi\`eres ann\'ees \`a Gaylord, o\`u il montrait d\'ej\`a son attirance pour la m\'ecanique et l'\'electricit\'e. Il construisit des maquettes d'avions, des bateaux t\'el\'eguid\'es et m\^eme un syst\`eme de t\'el\'egraphe sans-fils pour relier sa maison \`a celle d'un amis situ\'ee \`a environ 1km.\\
+	En 1932, Shannon entra \`a l'Universit\'e du Michigan, o\`u il fut introduit aux travaux de Georges Boole.\\
+	En 1936, il int\'egra le MIT o\`u il travailla sur l'analyseur diff\'erentiel de l'inventeur Vannevar Bush, un anc\^etre de l'ordinateur. Il appliqua l'alg\`ebre de Boole aux circuits \'electriques et publia un article prouvant que les circuits de commutation qu'il avait cr\'e\'e pouvaient r\'esoudre tous les probl\`emes que l'alg\`ebre de Boole pouvait r\'esoudre. L'une de ses applications fut l'additionneur 4 bits.
+
+	\begin{center}
+		\includegraphics[scale=2]{shannon_claude.jpg}\\
+		\caption{\textit{Claude Shannon}}
+	\end{center}
+
+	\section{Sim\'eon Denis Poisson}
+
+	Sim\'eon Denis Poisson (21 juin 1781 - 25 avril 1840) \'etait un math\'ematicien, g\'eom\`etre et physicien fran\c cais. N\'e \`a Pithiviers, il est le fils du soldat Sim\'eon Poisson.\\
+	En 1798, il entra \`a l'\'Ecole Polytechnique de Paris et ses professeurs lui laiss\`erent vite le choix de ses \'etudes.\\
+	Joseph Louis Lagrange, auxquels cours il assistait sur la th\'eorie des fonctions, reconnu son jeune talent et devenu son ami. Quant \`a Pierre-Simon Laplace, il consid\'erait Poisson comme son fils.\\
+	En 1802, il fut nomm\'e professeur suppl\'eant, puis professeur en 1806, succ\'edant \`a Jean Baptiste Joseph Fourier, lequel avait \'et\'e envoy\'e \`a Grenoble par Napol\'eon.
+
+	\begin{center}
+		\includegraphics[scale=0.25]{poisson_simeon.jpg}\\
+		\caption{\textit{Sim\'eon Denis Poisson}}
+	\end{center}
+
+	\section{Harry Nyquist}
+
+	Harry Theodor Nyquist (7 f\'evrier 1889 - 4 avril 1976) \'etait un ing\'enieur en \'electronique am\'ericain. N\'e en Su\`ede, il \'emigra aux \'Etats-Unis en 1907. Il entra \`a l'universit\'e de Dakota du Nord en 1912, et fut diplom\'e en 1915 en ing\'enierie \'electrique. Il re\c cu un Ph.D. en physique \`a Yale en 1917.\\
+	Il travailla chez AT\&T dans le D\'epartement de D\'eveloppement et de Recherche entre 1917 et 1934, puis continua quand cela devint le Laboratoire T\'el\'ephonique de Bell, jusqu'\`a son d\'epart \`a la retraite en 1954.
+	Ses premiers travaux th\'eoriques sur la d\'etermination des conditions de la bande passante pour transmettre l'information ont conduit aux avanc\'es de Claude Shannon, ce qui a men\'e au d\'eveloppement de la th\'eorie de l'information. En particulier, Nyquist determina que le nombre de pulsations ind\'ependantes par unit\'es de temps qui pouvaient \^etre envoy\'ees par le t\'el\'egraphe \'etait limit\'e \`a deux fois la bande passante du canal. Cette r\'egle est le principe du th\'eor\`eme d'\'echantillonnage de Nyquist-Shannon.
+
+	\begin{center}
+		\includegraphics[scale=1]{nyquist_harry.jpg}\\
+		\caption{\textit{Harry Nyquist}}
+	\end{center}
+
+\chapter{Présentation de la transformée de Fourier et ses applications}
+	\section{Definition}
+
+	La Transform\'ee de Fourier d\'ecompose une fonction du temps (un signal) en fr\'equences qui le composent, d'une mani\`ere similaire \`a l'expression d'un accord musical comme l'amplitude de ses notes. Le terme \textit{Transform\'ee de Fourier} fait r\'ef\'erence \`a la fois \`a la repr\'esentation du domaine de fr\'equences et \`a l'op\'erateur math\'ematique qui associe la repr\'esentation du domaine de fr\'equences \`a une fonction du temps.\\
+	"La Transform\'ee de Fourier est une extension des S\'eries de Fourier lorsque la p\'eriode de la fonction repr\'esent\'ee est allong\'ee et autoris\'ee \`a tendre vers l'infini " (Taneja, 2008).
+
+	\section{Applications}
+
+	La Transform\'ee de Fourier peut \^etre utilis\'ee pour r\'esoudre des \'equations diff\'erentielles, car il est souvent plus facile de trouver la transform\'ee de Fourier de la solution que la solution directe. En effet, la diff\'erenciation d'une transform\'ee de Fourier correspond \`a une multiplication par un polyn\^ome. Il suffit ensuite d'appliquer la transform\'ee de Fourier inverse pour trouver la solution.\\
+
+	Elle est \'egalement utilis\'ee en r\'esonance magn\'etique nucl\'eaire et dans d'autres types de spectroscopies comme le traitement d'IRM ou dans la spectrom\'etrie de masse.
 
 %Questions 2.0 et 2.1
 \chapter{D\'efinition de la DFT}
@@ -509,12 +554,8 @@ $$F_{e}=\frac{1}{T_{e}} \text{ donc } \frac{1}{F_{e}} \leq \frac{1}{2v_{c}}$$
 Ainsi $F_{e} \geq 2v_{c}$\\
 La fréquence d'échantillonnage doit être supérieure à deux fois la fréquence la plus élevée d'un signal à spectre limité.
 $$F_{e} > 2 f_{max}$$
-Dans le cas contraire, il y a perte d'informations et déformation du signal reconstitué.
-<<<<<<< HEAD
+Dans le cas contraire, il y a perte d'informations et déformation du signal reconstitué.\\
 C'est pourquoi, tant que la Fréquence d'échantillonnage $F_{e}$ est supérieure à $2 * 312 Hz$ (soit deux fois la fréquence), la fréquence est bien construite.
-=======
-C'est pourquoi, tant que la fréquence d'échantillonnage $F_{e}$ est supérieure à $2 * 312 Hz$ (soit deux fois la fréquence), la fréquence est bien construite.
->>>>>>> 6add62736188bd0252420620fccd49f44fd2be89
 
 Théorème de Poisson :
 Soit f une fonction régulière à décroissance rapide vers l’infini, $\forall n$ :
@@ -624,11 +665,10 @@ D'o\`u,
 \end{eqnarray*}
 On pose $m=n-k$ :
 \begin{eqnarray*}
-<<<<<<< HEAD
-		DFT(h)(t)&=&\sum_{k=0}^{N-1} y(k)(\sum_{\theta=0}^{N-1} x(\theta)e^{-2i\pi t\frac{\theta+k}{N}})\\
-				 &=&\sum_{k=0}^{N-1} y(k)e^{-2i\pi t\frac{k}{N}}(\sum_{\theta=0}^{N-1} x(\theta)e^{-2i\pi t\frac{\theta}{N}})\\
-				 &=&DFT(y).DFT(x)\\
-\end{eqnarray*}\newpage
+		DFT(h)(t)&=&\frac{1}{N}\sum_{n=0}^{N-1}\omega^{-tk}y(k)(\sum_{m=-k}^{N-1-k}\omega^{-tm}x(m))\\
+			     &=&N(\frac{1}{N}\sum_{n=0}^{N-1}\omega^{-tk}y(k))(\frac{1}{N}\sum_{m=0}^{N-1}\omega^{-tm}x(m))\\
+			     &=&N.DFT(x).DFT(y)\\
+\end{eqnarray*}
 
 
 Le résultat de la convolution de de $f*f$ est le suivant :
@@ -637,11 +677,14 @@ Le résultat de la convolution de de $f*f$ est le suivant :
 \caption{\textit{fft de $f*f$}}
 \end{center} 
 
-On va illustrer une propriété fondamental de la convolution :$$\widehat{f*h} = \widehat{f}.\widehat{h}$$Et d’après la propriété de la tranformée de fourier on peut obtenir :$$\widehat{\widehat{f*g}} = (f*g)(?x) = \widehat{\widehat{f}.\widehat{h}} $$
+On va illustrer une propriété fondamental de la convolution :
+$$\widehat{f*h} = \widehat{f}.\widehat{h}$$
+Et d’après la propriété de la tranformée de fourier on peut obtenir :
+$$\widehat{\widehat{f*g}} = (f*g)(?x) = \widehat{\widehat{f}.\widehat{h}} $$
 
 Si f*g est paire alors (f*g)(?x) = (f*g)(x) donc :
 $$(f*g)(x) = \widehat{\widehat{f}.\widehat{h}}$$
-Pour illustrer ce phénomène on commence par modéliser la convolution d'une fonction test. Puis on modélise la transformée de fourier des transformée de fourier grâce au programme suivant:\newpage
+Pour illustrer ce phénomène on commence par modéliser la convolution d'une fonction test. Puis on modélise la transformée de fourier des transformée de fourier grâce au programme suivant:\newpage
 \begin{lstlisting}
 clc
 clf
@@ -699,19 +742,6 @@ plot(fftshift(K))
 
 Les résultats obtenus sont identiques, ce qui justifie bien la propriété énoncée. Cependant ce résultat n’est valable que pour un N grand , soit ici N=640. En effet lorsque N est trop petit, le pas d’échantillonnage est trop faible pour avoir une bonne approximation de la fft et donc de la convolution.
 
-=======
-		DFT(h)(t)&=&\frac{1}{N}\sum_{n=0}^{N-1}\omega^{-tk}y(k)(\sum_{m=-k}^{N-1-k}\omega^{-tm}x(m))\\
-			     &=&N(\frac{1}{N}\sum_{n=0}^{N-1}\omega^{-tk}y(k))(\frac{1}{N}\sum_{m=0}^{N-1}\omega^{-tm}x(m))\\
-			     &=&N.DFT(x).DFT(y)\\
-\end{eqnarray*}
-
->>>>>>> 6add62736188bd0252420620fccd49f44fd2be89
-
-%Question 2.6
-\chapter{Ph\'enom\`ene de Gibbs}
-
-%Question 2.8
-\chapter{Effet du fen\^etrage}
 
 %Table des figures
 \listoffigures

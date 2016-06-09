@@ -2,15 +2,14 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces \textit {Repr\'esentation pour N=4}}}{11}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces \textit {Repr\'esentation pour N=8}}}{11}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces \textit {Repr\'esentation pour N=32}}}{12}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces \textit {Repr\'esentation pour N=256}}}{13}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces \textit {FFT pour N=256}}}{14}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces \textit {iFFT pour N=256}}}{14}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces \textit {Coefficients via DFT, FFT et Exactes pour N = 256}}}{17}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces \textit {Coefficients via DFT, FFT et Exactes pour N = 64}}}{18}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces \textit {Repr\'esentation pour N=4}}}{14}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \textit {Repr\'esentation pour N=8}}}{14}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces \textit {Repr\'esentation pour N=32}}}{15}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces \textit {Repr\'esentation pour N=256}}}{16}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces \textit {FFT pour N=256}}}{17}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces \textit {iFFT pour N=256}}}{17}
 \addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces \textit {Coefficients via DFT, FFT et Exactes pour N = 256}}}{20}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces \textit {Coefficients via DFT, FFT et Exactes pour N = 64}}}{21}
 \addvspace {10\p@ }
